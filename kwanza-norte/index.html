@@ -1,0 +1,1438 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://tonydevelopment.blog/kwanza-norte/">
+<meta property="og:url" content="https://tonydevelopment.blog/kwanza-norte/">
+<meta property="og:title" content="Kwanza Norte">
+<meta property="og:description" content="Terra, cultura, gastronomia, panos e um tradutor de bolso português–kimbundu.">
+<title>Kwanza Norte</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Terra, tradição, gastronomia, panos e um tradutor de bolso português–kimbundu da província angolana do Kwanza Norte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&display=swap">
+<style>
+/* Layout: um pano desenrolado — painéis assimétricos cosidos por faixas tecidas; o padrão samakaka assina cada secção */
+:root{
+  --algodao:#F3E8D6;      /* fundo: algodão cru */
+  --algodao-2:#E9D9BF;    /* superfície alternada */
+  --cartao:#FBF4E9;
+  --tinta:#1E1410;        /* texto: café torrado */
+  --tinta-2:#5C4738;
+  --linha:rgba(30,20,16,.16);
+  --linha-forte:rgba(30,20,16,.24);
+  --vermelho:#B9281A;     /* samakaka */
+  --ocre:#E3A21A;         /* dendém */
+  --anil:#1D4B9B;         /* rio Kwanza */
+  --mata:#2E6B3B;         /* mata de Cazengo */
+  --prato:#FFFBF4;
+  --prato-in:#F1E6D3;
+  --sombra:rgba(30,20,16,.16);
+  --fio:#5C4738;
+  /* blocos de pano: iguais nos dois temas */
+  --bloco-vermelho:#B3261A;
+  --bloco-ocre:#E3A21A;
+  --bloco-anil:#1B428C;
+  --bloco-mata:#275C32;
+  --bloco-cafe:#24170F;
+  --sobre-escuro:#F8EEDF;
+  --sobre-claro:#1E1410;
+  --grao:#6B3B1F;
+  --grao-sulco:#2A140A;
+
+  --f-display:"Anybody","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --f-texto:"Literata",Georgia,"Times New Roman",serif;
+  --t-0:.75rem;
+  --t-1:1.0625rem;
+  --t-2:1.25rem;
+  --t-3:1.6rem;
+  --t-4:clamp(2.1rem,5vw,3.6rem);
+  --raio:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --algodao:#140D0A; --algodao-2:#1E1511; --cartao:#1B120E;
+    --tinta:#F2E4CF; --tinta-2:#BCA58F;
+    --linha:rgba(242,228,207,.14); --linha-forte:rgba(242,228,207,.2);
+    --vermelho:#F0634D; --ocre:#F2B53A; --anil:#8AABF2; --mata:#73B985;
+    --prato:#2A1E18; --prato-in:#211812; --sombra:rgba(0,0,0,.45); --fio:#BCA58F;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --algodao:#140D0A; --algodao-2:#1E1511; --cartao:#1B120E;
+  --tinta:#F2E4CF; --tinta-2:#BCA58F;
+  --linha:rgba(242,228,207,.14); --linha-forte:rgba(242,228,207,.2);
+  --vermelho:#F0634D; --ocre:#F2B53A; --anil:#8AABF2; --mata:#73B985;
+  --prato:#2A1E18; --prato-in:#211812; --sombra:rgba(0,0,0,.45); --fio:#BCA58F;
+  color-scheme:dark;
+}
+@property --desliza{syntax:"<length>";inherits:false;initial-value:0px}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--algodao);color:var(--tinta);font-family:var(--f-texto);font-size:var(--t-1);line-height:1.6;overflow-x:clip;font-optical-sizing:auto}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--algodao)}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ocre);outline-offset:3px}
+::selection{background:var(--ocre);color:var(--sobre-claro)}
+
+.wrap{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative;z-index:1}
+.olho{font-family:var(--f-display);font-size:var(--t-0);font-weight:700;font-stretch:118%;letter-spacing:.16em;text-transform:uppercase;color:var(--vermelho)}
+.faixa{height:24px;background:var(--faixa-img,repeating-linear-gradient(90deg,var(--bloco-vermelho) 0 16px,var(--sobre-claro) 16px 22px,var(--bloco-ocre) 22px 38px,var(--bloco-anil) 38px 44px)) 0 0/96px 24px repeat-x;animation:faixa-anda 40s linear infinite}
+@keyframes faixa-anda{to{background-position:-960px 0}}
+
+/* ---------- Topo ---------- */
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:25;background:color-mix(in srgb,var(--algodao) 88%,transparent);-webkit-backdrop-filter:saturate(1.3) blur(12px);backdrop-filter:saturate(1.3) blur(12px);border-bottom:1px solid var(--linha)}
+.topo::before{content:"";display:block;height:5px;background:var(--faixa-img,repeating-linear-gradient(90deg,var(--bloco-vermelho) 0 12px,var(--bloco-ocre) 12px 24px,var(--bloco-anil) 24px 36px)) 0 0/20px 5px repeat-x}
+.topo-in{max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:850;font-stretch:128%;text-transform:uppercase;letter-spacing:.03em;font-size:.95rem;white-space:nowrap;flex:none}
+.marca-sinal{width:18px;height:18px;transform:rotate(45deg);background:var(--pano-texto,var(--bloco-vermelho)) center/16px 16px;border:2px solid var(--tinta);flex:none}
+.nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--f-display);font-weight:650;font-stretch:108%;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;padding:8px 11px;border-radius:999px;white-space:nowrap;transition:background .25s,color .25s}
+.nav a:hover{background:var(--algodao-2)}
+.nav a.ativo{background:var(--tinta);color:var(--algodao)}
+.nav a.nav-destaque{background:var(--bloco-vermelho);color:var(--sobre-escuro)}
+
+/* ---------- Herói ---------- */
+.hero{position:relative;padding-block:clamp(28px,5vw,64px) clamp(32px,4vw,52px);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% 45%;height:120%;background:radial-gradient(closest-side,color-mix(in srgb,var(--ocre) 22%,transparent),transparent);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.hero-texto{display:flex;flex-direction:column;gap:22px;min-width:0}
+.titulo{font-size:clamp(3.2rem,8.4vw,8rem);line-height:.84;letter-spacing:-.01em;text-transform:uppercase;display:grid;gap:.04em;position:relative;z-index:2}
+.titulo .linha{display:block;white-space:nowrap}
+.titulo .l1{color:var(--tinta)}
+.letra{display:inline-block;font-weight:880;font-stretch:108%;transition:font-stretch .45s cubic-bezier(.2,.8,.2,1),font-weight .45s cubic-bezier(.2,.8,.2,1)}
+.letra.abre{animation:abre 1.2s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*80ms)}
+@keyframes abre{from{font-stretch:50%;font-weight:200}to{font-stretch:108%;font-weight:880}}
+.titulo .l2{font-weight:900;font-stretch:125%;padding-left:.42em;background-image:var(--pano-texto,repeating-linear-gradient(135deg,var(--bloco-vermelho) 0 12px,var(--bloco-ocre) 12px 24px,var(--bloco-anil) 24px 36px));background-size:64px 64px;background-position:var(--desliza) 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(5px 5px 0 var(--tinta));animation:desliza 14s linear infinite;transition:font-stretch .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes desliza{to{--desliza:640px}}
+.lead{font-size:var(--t-2);line-height:1.55;max-width:34em;color:var(--tinta)}
+.saudacao{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border:1.5px solid var(--tinta);border-radius:var(--raio);background:var(--cartao);max-width:560px;box-shadow:7px 7px 0 var(--vermelho)}
+.saud-txt{min-width:0;display:grid;gap:4px}
+.saud-kmb{font-family:var(--f-display);font-weight:820;font-stretch:120%;font-size:clamp(1.35rem,3vw,1.75rem);line-height:1.1}
+.saud-pt{font-size:.95rem;color:var(--tinta-2);font-style:italic}
+.saud-pt b{font-style:normal;color:var(--tinta)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--f-display);font-weight:720;font-stretch:112%;text-transform:uppercase;letter-spacing:.07em;font-size:.8rem;padding:13px 20px;border:1.5px solid var(--tinta);color:var(--tinta);background:transparent;border-radius:999px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--tinta)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.btn-forte{background:var(--tinta);color:var(--algodao)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-redondo{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--tinta);background:var(--tinta);color:var(--algodao);display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .2s}
+.btn-redondo:hover{transform:scale(1.08)}
+.btn-redondo svg{width:22px;height:22px}
+.a-falar{animation:pulsa .9s ease-in-out infinite}
+@keyframes pulsa{50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--ocre) 45%,transparent)}}
+
+.pendurado{margin:0;display:grid;justify-items:center;gap:0;position:relative;min-width:0}
+.corda{width:108%;height:3px;background:var(--fio);border-radius:3px;position:relative;display:flex;justify-content:space-between;padding-inline:16%}
+.corda i{width:8px;height:20px;background:var(--ocre);border:1.5px solid var(--tinta);border-radius:2px;margin-top:-6px;position:relative;z-index:2}
+.pano-tecido{width:100%;max-width:440px;aspect-ratio:4/5;position:relative;transform-origin:50% 0;margin-top:-8px;animation:balanca 7s ease-in-out infinite;filter:drop-shadow(0 26px 30px var(--sombra))}
+.pano-tecido canvas{width:100%;height:100%;display:block;background:var(--bloco-vermelho)}
+.pano-tecido::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:repeating-linear-gradient(90deg,var(--fio) 0 2px,transparent 2px 7px);-webkit-mask:linear-gradient(#000,transparent);mask:linear-gradient(#000,transparent)}
+@keyframes balanca{0%,100%{transform:rotate(-.9deg)}50%{transform:rotate(1deg) skewX(.5deg)}}
+.pendurado figcaption{margin-top:28px;font-size:.85rem;font-style:italic;color:var(--tinta-2);text-align:center}
+
+.factos{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:clamp(36px,5vw,60px) 0 0;border-top:2px solid var(--tinta)}
+.factos div{padding:14px 16px 0 0;border-right:1px solid var(--linha);padding-left:14px}
+.factos div:first-child{padding-left:0}
+.factos dt{font-family:var(--f-display);font-size:.7rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase;color:var(--tinta-2)}
+.factos dd{margin:4px 0 0;font-family:var(--f-display);font-weight:780;font-stretch:112%;font-size:1.2rem;font-variant-numeric:tabular-nums;line-height:1.2}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .titulo{font-size:clamp(3.2rem,15vw,7rem)}
+  .pano-tecido{aspect-ratio:16/10;max-width:none}
+  .corda{width:100%}
+  .factos div{padding-left:0}
+}
+
+/* ---------- Fita de palavras ---------- */
+.fita{background:var(--bloco-cafe);color:var(--sobre-escuro);overflow:hidden;position:relative}
+.fita .faixa{height:14px;background-size:56px 14px}
+.fita-trilho{display:flex;width:max-content;animation:corre 60s linear infinite;padding-block:18px}
+.fita-trilho span{font-family:var(--f-display);font-weight:850;font-stretch:135%;font-size:clamp(1.3rem,3.2vw,2.3rem);text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:.6em;padding-right:.6em}
+.fita-trilho span::after{content:"";width:.45em;height:.45em;background:var(--bloco-vermelho);transform:rotate(45deg);flex:none}
+.fita-trilho span:nth-child(even){color:transparent;-webkit-text-stroke:1.3px var(--bloco-ocre)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* ---------- Secções ---------- */
+.sec{position:relative;padding-block:clamp(64px,9vw,128px);overflow-x:clip}
+.sec-alt{background:var(--algodao-2)}
+.sec-marca{position:absolute;top:clamp(20px,4vw,48px);right:-.04em;font-family:var(--f-display);font-weight:900;font-stretch:150%;font-size:clamp(5rem,21vw,17rem);line-height:.8;text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--linha-forte);pointer-events:none;user-select:none;z-index:0;white-space:nowrap}
+.sec-cab{display:grid;gap:14px;max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-cab h2{font-size:var(--t-4);font-weight:820;font-stretch:104%;line-height:1;letter-spacing:-.012em}
+.sec-intro{font-size:1.12rem;color:var(--tinta-2);max-width:40em}
+.revela{transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.revela.pre{transform:translateY(42px)}
+
+/* ---------- Terra: o rio ---------- */
+.rio{position:relative;display:flex;flex-direction:column}
+.rio svg{position:absolute;inset:0;overflow:visible;pointer-events:none;z-index:0}
+.rio-base{fill:none;stroke:var(--linha-forte);stroke-width:2;stroke-dasharray:3 9;stroke-linecap:round}
+.rio-agua{fill:none;stroke:var(--anil);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.ponto{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;transform:rotate(45deg) scale(.7);background:var(--algodao);border:3px solid var(--linha-forte);z-index:1;transition:transform .5s cubic-bezier(.3,1.6,.5,1),background .4s,border-color .4s}
+.ponto.aceso{transform:rotate(45deg) scale(1);background:var(--ocre);border-color:var(--tinta)}
+.lugar{position:relative;z-index:2;width:44%;background:var(--cartao);border:1.5px solid var(--tinta);border-radius:var(--raio);padding:20px 22px 22px;display:grid;gap:8px}
+.lugar:nth-of-type(odd){align-self:flex-start}
+.lugar:nth-of-type(even){align-self:flex-end}
+.lugar + .lugar{margin-top:-28px}
+.lugar-tag{justify-self:start;font-family:var(--f-display);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--algodao-2);color:var(--tinta)}
+.lugar h3{font-size:var(--t-3);font-weight:830;font-stretch:118%;line-height:1.05}
+.lugar p{color:var(--tinta-2);font-size:1rem}
+@media (max-width:760px){
+  .rio{padding-left:40px}
+  .lugar{width:100%}
+  .lugar:nth-of-type(n){align-self:stretch}
+  .lugar + .lugar{margin-top:18px}
+}
+.ngola{margin:clamp(56px,8vw,96px) 0 0;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:end;border-top:2px solid var(--tinta);padding-top:28px}
+.ngola blockquote{margin:0;font-family:var(--f-display);font-weight:780;font-stretch:110%;font-size:clamp(1.8rem,4.2vw,3.2rem);line-height:1.02;letter-spacing:-.01em}
+.ngola blockquote b{color:var(--vermelho);font-weight:900;font-stretch:140%}
+.ngola blockquote em{font-style:normal;text-decoration:underline;text-decoration-color:var(--ocre);text-decoration-thickness:.12em;text-underline-offset:.1em}
+.ngola figcaption{color:var(--tinta-2);font-size:1.02rem}
+@media (max-width:760px){.ngola{grid-template-columns:1fr}}
+
+/* ---------- Tradição ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.bloco{position:relative;overflow:hidden;border-radius:var(--raio);padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:12px;min-height:230px;color:var(--sobre-escuro);min-width:0}
+.bloco::after{content:"";position:absolute;width:190px;height:190px;right:-70px;bottom:-70px;transform:rotate(45deg);background:var(--pano-texto,transparent) 0 0/48px 48px;opacity:.28;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s;pointer-events:none}
+.bloco:hover::after{transform:rotate(90deg) scale(1.25);opacity:.45}
+.bloco > *{position:relative;z-index:1}
+.bloco .termo{font-family:var(--f-display);font-weight:900;font-stretch:128%;font-size:clamp(1.9rem,3.6vw,3rem);line-height:.95;text-transform:uppercase;letter-spacing:-.01em;overflow-wrap:anywhere}
+.bloco .sub{font-family:var(--f-display);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.bloco p{max-width:36em;font-size:1rem}
+.b1{grid-column:span 4;grid-row:span 2;background:var(--bloco-vermelho);justify-content:flex-end}
+.b1 .termo{font-size:clamp(2.6rem,6.4vw,5.4rem)}
+.b1 p{font-size:1.1rem}
+.b2{grid-column:span 2;background:var(--bloco-ocre);color:var(--sobre-claro)}
+.b3{grid-column:span 2;background:var(--bloco-anil)}
+.b4{grid-column:span 3;background:var(--bloco-mata)}
+.b5{grid-column:span 3;background:var(--bloco-cafe)}
+@media (max-width:900px){.bento{grid-template-columns:1fr 1fr}.b1,.b4,.b5{grid-column:span 2;grid-row:auto}.b2,.b3{grid-column:span 1}}
+@media (max-width:560px){.bento{grid-template-columns:1fr}.bento > .bloco{grid-column:auto}}
+.costumes-cab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:clamp(48px,7vw,80px) 0 16px;padding-top:24px;border-top:2px solid var(--tinta)}
+.costumes-cab h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:840;font-stretch:112%;line-height:1}
+.costumes-cab p{color:var(--tinta-2);font-size:.98rem}
+.costumes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1.5px solid var(--tinta);border-radius:var(--raio);background:var(--cartao);overflow:hidden}
+.costume{padding:20px 20px 24px;display:flex;flex-direction:column;gap:8px;border-right:1px solid var(--linha-forte);border-bottom:1px solid var(--linha-forte);position:relative;min-width:0;transition:background .3s}
+.costume:nth-child(4n){border-right:0}
+.costume:nth-last-child(-n+4){border-bottom:0}
+.costume::before{content:"";position:absolute;left:0;top:0;height:5px;width:0;background:var(--faixa-img,var(--bloco-vermelho)) 0 0/20px 5px repeat-x;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.costume:hover{background:var(--algodao)}
+.costume:hover::before{width:100%}
+.costume .sub{font-family:var(--f-display);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--vermelho)}
+.costume h4{font-size:1.65rem;font-weight:880;font-stretch:122%;line-height:1}
+.costume p{font-size:.97rem;color:var(--tinta-2)}
+@media (max-width:980px){.costumes{grid-template-columns:repeat(2,minmax(0,1fr))}.costume:nth-child(n){border-right:1px solid var(--linha-forte);border-bottom:1px solid var(--linha-forte)}.costume:nth-child(2n){border-right:0}.costume:nth-last-child(-n+2){border-bottom:0}}
+@media (max-width:560px){.costumes{grid-template-columns:1fr}.costume:nth-child(n){border-right:0;border-bottom:1px solid var(--linha-forte)}.costume:last-child{border-bottom:0}}
+
+/* ---------- Levar no telemóvel (QR) ---------- */
+.levar{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){.levar{grid-template-columns:1fr}}
+.levar-txt{display:grid;gap:16px;min-width:0}
+.levar-txt h2{font-size:var(--t-4);font-weight:820;font-stretch:104%;line-height:1}
+.levar-txt > p{color:var(--tinta-2);font-size:1.08rem;max-width:36em}
+.url-linha{display:flex;gap:8px;flex-wrap:wrap}
+.url-linha input{flex:1 1 240px;min-width:0;font:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid var(--tinta);border-radius:999px;background:var(--cartao);color:var(--tinta)}
+.url-linha input:focus{outline:none;box-shadow:0 0 0 3px var(--ocre)}
+.qr-cartao{justify-self:center;width:min(100%,360px);background:var(--bloco-vermelho);border-radius:10px;padding:14px;box-shadow:10px 10px 0 var(--tinta);transform:rotate(-2deg);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.qr-cartao:hover{transform:rotate(0) scale(1.02)}
+.qr-cartao .faixa{height:16px;background-size:64px 16px;border-radius:4px 4px 0 0}
+.qr-papel{background:#FBF4E9;padding:18px;display:grid;gap:10px;justify-items:center;border-radius:0 0 4px 4px}
+.qr-papel svg{width:100%;height:auto;display:block}
+.qr-papel p{font-family:var(--f-display);font-weight:800;font-stretch:125%;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;color:#1E1410;text-align:center;overflow-wrap:anywhere}
+.qr-papel small{font-family:var(--f-texto);font-size:.78rem;color:#5C4738;text-align:center;overflow-wrap:anywhere;max-width:100%}
+.passos-qr{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:q}
+.passos-qr li{counter-increment:q;display:flex;gap:10px;align-items:baseline;font-size:.98rem}
+.passos-qr li::before{content:counter(q);font-family:var(--f-display);font-weight:900;font-stretch:130%;color:var(--vermelho);font-size:1.2rem;min-width:1.1em}
+
+/* ---------- Mesa ---------- */
+.pratos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1040px){.pratos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.pratos{grid-template-columns:1fr}}
+.prato{perspective:1300px;cursor:pointer;outline:none;min-width:0}
+.prato-in{display:grid;height:100%;transition:transform .85s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.prato.virado .prato-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1.5px solid var(--tinta);border-radius:var(--raio);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px;background:var(--cartao)}
+.verso{transform:rotateY(180deg);background:var(--tinta);color:var(--algodao);gap:10px}
+.prato:focus-visible .face{outline:3px solid var(--ocre);outline-offset:3px}
+.prato svg{width:100%;max-width:210px;height:auto;align-self:center;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.prato:hover .frente svg{transform:rotate(-14deg) scale(1.04)}
+.prato h3{font-size:1.45rem;font-weight:830;font-stretch:115%;line-height:1.05}
+.kmb-tag{align-self:flex-start;font-family:var(--f-display);font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:3px 9px;border:1.5px solid currentColor;border-radius:999px}
+.frente .kmb-tag{color:var(--vermelho)}
+.prato .desc{font-size:.97rem;color:var(--tinta-2)}
+.virar{margin-top:auto;padding-top:6px;font-family:var(--f-display);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2);display:flex;align-items:center;gap:6px}
+.verso h4{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ocre)}
+.verso p,.verso li{font-size:.95rem}
+.verso ul{margin:0;padding-left:1.1em;display:grid;gap:2px}
+.verso .virar{color:inherit;opacity:.7}
+
+.cafe{margin-top:clamp(48px,7vw,80px);background:var(--bloco-cafe);color:var(--sobre-escuro);border-radius:var(--raio);padding:clamp(26px,5vw,60px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px;position:relative;overflow:hidden;min-height:320px}
+.cafe .olho{color:var(--bloco-ocre)}
+.cafe h3{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;font-stretch:120%;line-height:.95;text-transform:uppercase;margin-block:10px 16px}
+.cafe p{max-width:34em;opacity:.92}
+.cafe-num{display:flex;align-items:baseline;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--sobre-escuro) 25%,transparent)}
+.cafe-num b{font-family:var(--f-display);font-weight:900;font-stretch:130%;font-size:3rem;line-height:1;color:var(--bloco-ocre);font-variant-numeric:tabular-nums}
+.cafe-num span{font-size:.95rem;opacity:.85;max-width:24em}
+.graos{position:relative;min-height:240px}
+.grao{position:absolute;width:30px;height:40px;border-radius:50%;background:var(--grao);box-shadow:inset -5px -6px 0 rgba(0,0,0,.28),inset 4px 4px 0 rgba(255,255,255,.08);animation:flutua 9s ease-in-out infinite;animation-delay:var(--d,0s)}
+.grao::after{content:"";position:absolute;left:50%;top:14%;bottom:14%;width:3px;margin-left:-1.5px;border-radius:3px;background:var(--grao-sulco);transform:rotate(10deg)}
+@keyframes flutua{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-18px) rotate(calc(var(--r,0deg) + 25deg))}}
+@media (max-width:760px){.cafe{grid-template-columns:1fr}.graos{min-height:150px}}
+
+.receita{margin-top:clamp(48px,7vw,80px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:clamp(28px,5vw,64px);border-top:2px solid var(--tinta);padding-top:32px}
+.receita h3{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:850;font-stretch:115%;line-height:1}
+.receita-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.receita-meta span{font-family:var(--f-display);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;background:var(--algodao-2);border-radius:999px;font-variant-numeric:tabular-nums}
+.ingredientes{list-style:none;margin:22px 0 0;padding:0}
+.ingredientes label{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--linha-forte);cursor:pointer}
+.ingredientes input{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:1.5px solid var(--tinta);border-radius:3px;flex:none;margin:3px 0 0;display:grid;place-content:center;cursor:pointer;background:var(--cartao)}
+.ingredientes input::before{content:"";width:10px;height:6px;border:solid var(--sobre-escuro);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg) translate(1px,-1px) scale(0);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.ingredientes input:checked{background:var(--bloco-vermelho);border-color:var(--bloco-vermelho)}
+.ingredientes input:checked::before{transform:rotate(-45deg) translate(1px,-1px) scale(1)}
+.ingredientes input:checked + span{text-decoration:line-through;color:var(--tinta-2)}
+.passos{list-style:none;margin:0;padding:0;counter-reset:passo;display:grid;gap:20px}
+.passos li{counter-increment:passo;display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:start}
+.passos li::before{content:counter(passo);font-family:var(--f-display);font-weight:900;font-stretch:135%;font-size:2.5rem;line-height:.9;color:var(--vermelho)}
+.passos b{font-family:var(--f-display);font-weight:760;font-stretch:108%;display:block;font-size:1.08rem;margin-bottom:2px}
+.passos p{color:var(--tinta-2)}
+@media (max-width:760px){.receita{grid-template-columns:1fr}}
+
+/* ---------- Panos ---------- */
+.panos-info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:700px){.panos-info{grid-template-columns:1fr}}
+.info-pano{border:1.5px solid var(--tinta);border-radius:var(--raio);background:var(--cartao);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.amostra{height:88px;position:relative;border-bottom:1.5px solid var(--tinta);background:var(--algodao-2)}
+.amostra canvas{width:100%;height:100%;display:block}
+.info-corpo{padding:18px 22px 22px;display:grid;gap:8px}
+.info-corpo h3{font-size:1.6rem;font-weight:850;font-stretch:120%;line-height:1}
+.info-corpo .sub{font-family:var(--f-display);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--vermelho)}
+.info-corpo p{color:var(--tinta-2)}
+
+.tear{margin-top:clamp(48px,7vw,80px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (max-width:860px){.tear{grid-template-columns:1fr}}
+.tear-quadro{display:grid;gap:0;min-width:0}
+.tear-barra{height:16px;background:var(--fio);border-radius:4px;position:relative;z-index:2}
+.tear-tela{position:relative;aspect-ratio:4/3;background:var(--algodao-2) repeating-linear-gradient(90deg,var(--linha-forte) 0 1px,transparent 1px 8px);border-inline:1.5px solid var(--tinta);overflow:hidden;max-width:100%}
+.tear-tela canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lancadeira{position:absolute;left:-2%;right:-2%;height:10px;margin-top:-5px;background:linear-gradient(90deg,transparent,var(--ocre) 12%,var(--ocre) 88%,transparent);box-shadow:0 0 18px var(--ocre);border-radius:6px;opacity:0;transition:opacity .3s;pointer-events:none}
+.lancadeira.ativa{opacity:1}
+.tear-franja{height:22px;background:repeating-linear-gradient(90deg,var(--fio) 0 2px,transparent 2px 7px);-webkit-mask:linear-gradient(#000 40%,transparent);mask:linear-gradient(#000 40%,transparent)}
+.tear-ctl{display:grid;gap:20px;min-width:0}
+.tear-nome{display:grid;gap:4px;padding-bottom:18px;border-bottom:1.5px solid var(--tinta)}
+.tear-nome h3{font-size:clamp(2rem,4vw,2.9rem);font-weight:900;font-stretch:125%;line-height:1;text-transform:uppercase}
+.tear-nome p{font-style:italic;color:var(--tinta-2)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend,.rotulo{font-family:var(--f-display);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:10px;padding:0;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.chips label{font-family:var(--f-display);font-weight:650;font-stretch:108%;font-size:.85rem;padding:8px 14px;border:1.5px solid var(--tinta);border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .2s,color .2s,transform .2s}
+.chips label:hover{transform:translateY(-1px)}
+.chips input:checked + label{background:var(--tinta);color:var(--algodao)}
+.chips input:focus-visible + label{outline:3px solid var(--ocre);outline-offset:2px}
+.cores{display:inline-flex;border-radius:999px;overflow:hidden;border:1px solid var(--linha-forte)}
+.cores i{width:10px;height:16px;display:block}
+.deslizar{display:grid;gap:6px}
+.deslizar-cab{display:flex;justify-content:space-between;align-items:baseline}
+.deslizar output{font-family:var(--f-display);font-weight:700;font-size:.85rem;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--vermelho)}
+.tear-acoes{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- Língua ---------- */
+.palavras{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.palavra{position:relative;border:1.5px solid var(--tinta);border-radius:var(--raio);padding:16px 16px 20px;background:var(--cartao);overflow:hidden;display:grid;gap:4px;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.palavra::after{content:"";position:absolute;left:0;right:0;bottom:0;height:0;background:var(--faixa-img,var(--bloco-vermelho)) 0 0/48px 12px repeat-x;transition:height .35s cubic-bezier(.2,.8,.2,1)}
+.palavra:hover{transform:translateY(-4px) rotate(-.6deg);border-color:var(--vermelho)}
+.palavra:hover::after{height:8px}
+.palavra b{font-family:var(--f-display);font-weight:850;font-stretch:120%;font-size:1.5rem;line-height:1.1}
+.palavra span{font-size:.95rem;color:var(--tinta-2)}
+.numeros{margin-top:clamp(44px,6vw,72px);display:grid;grid-template-columns:repeat(10,minmax(0,1fr));border:1.5px solid var(--tinta);border-radius:var(--raio);overflow:hidden;background:var(--cartao)}
+.num{border:0;border-right:1px solid var(--linha-forte);background:transparent;padding:14px 6px;display:grid;gap:4px;justify-items:center;cursor:pointer;transition:background .25s,color .25s;min-width:0}
+.num:last-child{border-right:0}
+.num:hover{background:var(--tinta);color:var(--algodao)}
+.num b{font-family:var(--f-display);font-weight:900;font-stretch:130%;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.num span{font-family:var(--f-display);font-weight:650;font-size:.82rem;overflow-wrap:anywhere;text-align:center}
+@media (max-width:700px){.numeros{grid-template-columns:repeat(5,minmax(0,1fr))}.num:nth-child(5){border-right:0}.num:nth-child(-n+5){border-bottom:1px solid var(--linha-forte)}}
+.numeros-cab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:clamp(44px,6vw,72px) 0 12px}
+.numeros-cab + .numeros{margin-top:0}
+.numeros-cab h3{font-size:1.5rem;font-weight:820;font-stretch:112%}
+.numeros-cab p{font-size:.9rem;color:var(--tinta-2)}
+.pronuncia{margin-top:clamp(44px,6vw,72px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--tinta)}
+.pronuncia div{padding:18px 20px 0 0;display:grid;gap:6px;align-content:start}
+.pronuncia div + div{padding-left:20px;border-left:1px solid var(--linha-forte)}
+.pronuncia b{font-family:var(--f-display);font-weight:850;font-stretch:118%;font-size:1.3rem}
+.pronuncia p{color:var(--tinta-2);font-size:.98rem}
+@media (max-width:760px){.pronuncia{grid-template-columns:1fr}.pronuncia div + div{padding-left:0;border-left:0;border-top:1px solid var(--linha-forte);margin-top:18px}}
+
+/* ---------- Tradutor ---------- */
+.estudio{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:980px){.estudio{grid-template-columns:1fr}}
+.painel{border:1.5px solid var(--tinta);border-radius:6px;background:var(--cartao);overflow:hidden;min-width:0;box-shadow:8px 8px 0 var(--tinta)}
+.painel > .faixa{height:14px;background-size:56px 14px;border-bottom:1.5px solid var(--tinta)}
+.painel-corpo{padding:clamp(18px,3vw,28px);display:grid;gap:18px}
+.direcao{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lado{font-family:var(--f-display);font-weight:800;font-stretch:118%;text-transform:uppercase;letter-spacing:.04em;font-size:1rem;padding:8px 14px;border-radius:999px;background:var(--algodao-2)}
+.lado.para{background:var(--tinta);color:var(--algodao)}
+.trocar{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--tinta);background:var(--cartao);display:grid;place-items:center;cursor:pointer;transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
+.trocar svg{width:22px;height:22px}
+.trocar.gira{transform:rotate(180deg)}
+.campo{display:grid;gap:8px}
+.campo label{font-family:var(--f-display);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2)}
+textarea{width:100%;min-height:104px;resize:vertical;font:inherit;font-size:1.15rem;line-height:1.5;color:var(--tinta);background:var(--algodao);border:1.5px solid var(--linha-forte);border-radius:var(--raio);padding:12px 14px;transition:border-color .2s}
+textarea:focus{outline:none;border-color:var(--tinta)}
+.exemplos{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--f-display);font-weight:600;font-size:.8rem;padding:6px 11px;border:1px solid var(--linha-forte);border-radius:999px;background:transparent;cursor:pointer;transition:background .2s,border-color .2s}
+.chip:hover{background:var(--algodao-2);border-color:var(--tinta)}
+.saida-caixa{border-top:1.5px dashed var(--linha-forte);padding-top:16px;display:grid;gap:12px}
+.saida-cab{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.saida{font-family:var(--f-display);font-weight:720;font-stretch:108%;font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.25;min-height:2.6em;overflow-wrap:anywhere}
+.seg{display:inline-block;animation:materializa .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*70ms)}
+.hit{text-decoration:underline;text-decoration-color:var(--ocre);text-decoration-thickness:.12em;text-underline-offset:.14em;border-radius:3px;transition:background .2s}
+.hit:hover{background:color-mix(in srgb,var(--ocre) 28%,transparent)}
+.miss{color:var(--tinta-2);font-weight:450;text-decoration:underline dotted;text-decoration-color:var(--tinta-2);text-underline-offset:.18em}
+.vazio{color:var(--tinta-2);font-weight:450}
+@keyframes materializa{from{opacity:0;filter:blur(8px);transform:translateY(10px)}}
+.medidor{display:grid;gap:6px}
+.medidor-barra{height:8px;border-radius:8px;background:var(--algodao-2);overflow:hidden}
+.medidor-barra i{display:block;height:100%;width:0;background:var(--faixa-img,var(--bloco-vermelho)) 0 0/32px 8px repeat-x;transition:width .7s cubic-bezier(.2,.8,.2,1)}
+.medidor p{font-size:.88rem;color:var(--tinta-2);font-variant-numeric:tabular-nums}
+.pares{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.pares li{font-size:.85rem;padding:4px 10px;border-radius:999px;background:var(--algodao-2)}
+.pares li b{font-family:var(--f-display);font-weight:750}
+.acoes{display:flex;flex-wrap:wrap;gap:8px}
+.acoes .btn{padding:10px 16px}
+.glossario{border-top:1.5px solid var(--tinta);padding-top:14px}
+.glossario summary{cursor:pointer;font-family:var(--f-display);font-weight:750;font-stretch:110%;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+.glossario-busca{margin:14px 0 10px;width:100%;font:inherit;font-size:1rem;padding:10px 12px;border:1.5px solid var(--linha-forte);border-radius:var(--raio);background:var(--algodao);color:var(--tinta)}
+.glossario-busca:focus{outline:none;border-color:var(--tinta)}
+.tabela{max-height:320px;overflow:auto;border:1px solid var(--linha-forte);border-radius:var(--raio)}
+.tabela table{width:100%;border-collapse:collapse;font-size:.92rem}
+.tabela th{position:sticky;top:0;background:var(--algodao-2);text-align:left;font-family:var(--f-display);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px}
+.tabela td{padding:7px 10px;border-top:1px solid var(--linha);vertical-align:top}
+.tabela td:nth-child(2){font-family:var(--f-display);font-weight:720}
+.tabela td:nth-child(3){color:var(--tinta-2);font-size:.82rem}
+.aviso-kmb{font-size:.88rem;color:var(--tinta-2);font-style:italic}
+
+.abas{display:flex;flex-wrap:wrap;gap:6px}
+.aba{font-family:var(--f-display);font-weight:700;font-stretch:110%;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;padding:8px 13px;border-radius:999px;border:1.5px solid var(--tinta);background:transparent;cursor:pointer;transition:background .2s,color .2s}
+.aba[aria-selected="true"]{background:var(--bloco-vermelho);border-color:var(--bloco-vermelho);color:var(--sobre-escuro)}
+.conversa{display:flex;flex-direction:column;gap:12px;min-height:380px;padding:18px 14px;border-radius:var(--raio);background:var(--algodao) radial-gradient(var(--linha) 1px,transparent 1.5px) 0 0/18px 18px}
+.linha-fala{display:flex;gap:10px;align-items:flex-end;max-width:90%}
+.linha-fala.b{align-self:flex-end;flex-direction:row-reverse}
+.avatar{width:40px;height:40px;border-radius:50%;flex:none;background:var(--bloco-vermelho) center/cover;border:2px solid var(--tinta)}
+.fala{border:1.5px solid var(--tinta);background:var(--cartao);color:var(--tinta);border-radius:16px 16px 16px 4px;padding:9px 14px 10px;cursor:pointer;display:flex;flex-direction:column;gap:2px;text-align:left;min-width:0;transition:transform .2s}
+.fala:hover{transform:translateY(-2px)}
+.b .fala{background:var(--tinta);color:var(--algodao);border-radius:16px 16px 4px 16px}
+.fala .quem{font-family:var(--f-display);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.fala .k{font-family:var(--f-display);font-weight:760;font-stretch:108%;font-size:1.15rem;line-height:1.25}
+.fala .p{font-style:italic;font-size:.92rem;opacity:.8}
+.sem-pt .fala .p{display:none}
+.entra{animation:entra .5s cubic-bezier(.2,.9,.3,1.25) both}
+@keyframes entra{from{opacity:0;transform:translateY(14px) scale(.9)}}
+.digita{display:inline-flex;gap:5px;padding:14px 16px;border:1.5px solid var(--tinta);border-radius:16px 16px 16px 4px;background:var(--cartao)}
+.b .digita{border-radius:16px 16px 4px 16px;background:var(--tinta)}
+.digita i{width:7px;height:7px;border-radius:50%;background:var(--tinta-2);animation:salta 1s ease-in-out infinite}
+.b .digita i{background:var(--algodao)}
+.digita i:nth-child(2){animation-delay:.15s}.digita i:nth-child(3){animation-delay:.3s}
+@keyframes salta{30%{transform:translateY(-6px)}}
+.dialogo-rodape{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.alternar{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;cursor:pointer}
+.alternar input{accent-color:var(--vermelho);width:18px;height:18px}
+.dica{font-size:.85rem;color:var(--tinta-2);font-style:italic}
+
+/* ---------- Rodapé ---------- */
+.rodape{background:var(--bloco-cafe);color:var(--sobre-escuro)}
+.rodape-in{padding-block:clamp(48px,7vw,80px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:end}
+.rodape .adeus{font-family:var(--f-display);font-weight:900;font-stretch:135%;font-size:clamp(2.4rem,7vw,5.6rem);line-height:.9;text-transform:uppercase}
+.rodape .adeus span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--bloco-ocre)}
+.rodape p{opacity:.85;font-size:.95rem}
+@media (max-width:760px){.rodape-in{grid-template-columns:1fr}}
+
+.aviso{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:40;background:var(--tinta);color:var(--algodao);padding:10px 18px;border-radius:999px;font-family:var(--f-display);font-weight:650;font-size:.88rem;box-shadow:0 10px 30px var(--sombra);animation:entra .35s cubic-bezier(.2,.9,.3,1.25)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .revela.pre{transform:none}
+}
+</style>
+
+<header class="topo">
+  <div class="topo-in">
+    <a class="marca" href="#inicio"><span class="marca-sinal" aria-hidden="true"></span>Kwanza Norte</a>
+    <nav class="nav" aria-label="Secções">
+      <a href="#terra">Terra</a>
+      <a href="#tradicao">Cultura</a>
+      <a href="#mesa">Mesa</a>
+      <a href="#panos">Panos</a>
+      <a href="#lingua">Língua</a>
+      <a href="#tradutor" class="nav-destaque">Tradutor</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-texto">
+      <p class="olho">Angola · Província do Kwanza Norte</p>
+      <h1 class="titulo" id="titulo" aria-label="Kwanza Norte">
+        <span class="linha l1" aria-hidden="true">Kwanza</span>
+        <span class="linha l2" aria-hidden="true">Norte</span>
+      </h1>
+      <p class="lead">Serras cobertas de café, o rio Kwanza a caminho do mar e uma língua, o kimbundu, que deu nome a Angola. Aqui come-se funje, veste-se pano e cumprimenta-se assim:</p>
+      <div class="saudacao">
+        <div class="saud-txt">
+          <p class="saud-kmb" lang="kmb">Wazekele kiambote?</p>
+          <p class="saud-pt">“Dormiste bem?” É o bom-dia em kimbundu. Responde-se <b lang="kmb">Ngazekele kiambote</b>.</p>
+        </div>
+        <button class="btn-redondo" type="button" data-falar="Wazekele kiambote?" aria-label="Ouvir a pronúncia aproximada">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-forte" href="#tradutor">Abrir o tradutor</a>
+        <a class="btn" href="#tear">Tecer um pano</a>
+      </div>
+    </div>
+    <figure class="pendurado">
+      <div class="corda" aria-hidden="true"><i></i><i></i></div>
+      <div class="pano-tecido"><canvas id="pano-hero" role="img" aria-label="Pano com losangos concêntricos inspirados no samakaka"></canvas></div>
+      <figcaption>Losangos inspirados no samakaka, tecidos ao vivo.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <dl class="factos">
+      <div><dt>Capital</dt><dd>N’dalatando</dd></div>
+      <div><dt>Coordenadas da capital</dt><dd>9°18′ S · 14°55′ E</dd></div>
+      <div><dt>Língua da terra</dt><dd>Kimbundu</dd></div>
+      <div><dt>Rios</dt><dd>Kwanza e Lucala</dd></div>
+      <div><dt>Área</dt><dd>≈ 24 110 km²</dd></div>
+      <div><dt>População · Censo 2014</dt><dd>≈ 443 mil</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="fita" aria-hidden="true">
+  <div class="faixa"></div>
+  <div class="fita-trilho">
+    <span>Wazekele kiambote</span><span>Ngasakidila</span><span>Muxima</span><span>Kamba diami</span><span>Tuende</span><span>Kitanda</span><span>Funji</span><span>Ngakuzola</span><span>Xala kiambote</span><span>Kizomba</span>
+    <span>Wazekele kiambote</span><span>Ngasakidila</span><span>Muxima</span><span>Kamba diami</span><span>Tuende</span><span>Kitanda</span><span>Funji</span><span>Ngakuzola</span><span>Xala kiambote</span><span>Kizomba</span>
+  </div>
+  <div class="faixa"></div>
+</div>
+
+<!-- TERRA -->
+<section class="sec" id="terra">
+  <span class="sec-marca" aria-hidden="true">Ixi</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho"><span lang="kmb">Ixi</span> · a terra</p>
+      <h2>Serras de café, dois rios e uma fortaleza</h2>
+      <p class="sec-intro">O Kwanza Norte fica a leste de Luanda, entre as serras do interior e o vale do rio Kwanza. É terra húmida e verde, de mata e cafezais, atravessada pelo Lucala, que desce até se juntar ao Kwanza em Massangano.</p>
+    </header>
+    <div class="rio" id="rio">
+      <svg id="rio-svg" aria-hidden="true"><path class="rio-base"/><path class="rio-agua"/></svg>
+      <article class="lugar revela">
+        <span class="lugar-tag">Capital</span>
+        <h3>N’dalatando</h3>
+        <p>Cidade verde, cercada de serras e mata húmida. No tempo colonial chamou-se Vila Salazar e recuperou o nome original depois da independência.</p>
+      </article>
+      <article class="lugar revela">
+        <span class="lugar-tag">Café</span>
+        <h3>Cazengo</h3>
+        <p>O município da capital e o coração cafeeiro da província. Nas encostas sombreadas pela mata, as antigas roças de robusta fizeram a fama do café de Cazengo.</p>
+      </article>
+      <article class="lugar revela">
+        <span class="lugar-tag">Serra</span>
+        <h3>Golungo Alto</h3>
+        <p>Vila de serra, entre névoas e cafezais, onde a mata desce até às linhas de água e as estradas sobem em curvas.</p>
+      </article>
+      <article class="lugar revela">
+        <span class="lugar-tag">Planalto</span>
+        <h3>Ambaca</h3>
+        <p>O planalto de Camabatela, terra de pastos e gado. No século XIX, os <i>ambaquistas</i>, comerciantes e escrivães que dominavam a escrita, ficaram conhecidos em todo o interior de Angola.</p>
+      </article>
+      <article class="lugar revela">
+        <span class="lugar-tag">Rio Kwanza</span>
+        <h3>Dondo e Cambambe</h3>
+        <p>O Dondo foi porto fluvial por onde descia o café do interior. Perto fica a barragem de Cambambe, uma das grandes fontes de eletricidade do país.</p>
+      </article>
+      <article class="lugar revela">
+        <span class="lugar-tag">História</span>
+        <h3>Massangano</h3>
+        <p>Onde o Lucala encontra o Kwanza ergue-se a fortaleza de Massangano, fundada pelos portugueses em 1583 no coração do antigo reino do Ndongo.</p>
+      </article>
+    </div>
+    <figure class="ngola revela">
+      <blockquote><p>O nome <em>Angola</em> vem de <b lang="kmb">ngola</b>, o título dos reis do Ndongo.</p></blockquote>
+      <figcaption>O Ndongo era o reino dos ambundu, o povo do kimbundu. No século XVII, a rainha Njinga Mbande, do Ndongo e da Matamba, resistiu durante décadas à ocupação portuguesa.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- TRADIÇÃO -->
+<section class="sec sec-alt" id="tradicao">
+  <span class="sec-marca" aria-hidden="true">Kizomba</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho"><span lang="kmb">Kizomba</span> · cultura e tradição</p>
+      <h2>Festas, contos e o som do ngoma</h2>
+      <p class="sec-intro">A cultura do Kwanza Norte é ambundu: vive-se em família alargada, respeita-se a palavra dos mais velhos e celebra-se com música, comida e panos novos.</p>
+    </header>
+    <div class="bento">
+      <article class="bloco b1 revela">
+        <span class="sub">O pedido de casamento</span>
+        <h3 class="termo">Alambamento</h3>
+        <p>Antes do casamento, a família do noivo apresenta-se à família da noiva com uma carta de pedido e uma lista de presentes: grades de bebida, panos e lenços para a mãe, um fato para o pai. Lê-se a lista, negocia-se, come-se em conjunto, e só depois as duas famílias ficam ligadas.</p>
+      </article>
+      <article class="bloco b2 revela">
+        <span class="sub">Contos à noite</span>
+        <h3 class="termo" lang="kmb">Missosso</h3>
+        <p>Os contos tradicionais, <i lang="kmb">misoso</i> em kimbundu, contados pelos mais velhos: animais espertos, reis vaidosos e lições que ficam. Óscar Ribas reuniu muitos nos livros <i>Missosso</i>.</p>
+      </article>
+      <article class="bloco b3 revela">
+        <span class="sub">Dança</span>
+        <h3 class="termo" lang="kmb">Semba</h3>
+        <p>Vem de <i lang="kmb">masemba</i>, a umbigada da dança. <i lang="kmb">Kizomba</i> quer dizer festa. Duas palavras kimbundu que hoje se dançam no mundo inteiro.</p>
+      </article>
+      <article class="bloco b4 revela">
+        <span class="sub">Instrumentos</span>
+        <h3 class="termo" lang="kmb">Ngoma · Dikanza · Hungu</h3>
+        <p>O ngoma é o tambor. A dikanza é um reco-reco de bambu raspado com uma vareta. O hungu é um arco musical com cabaça, antepassado do berimbau brasileiro.</p>
+      </article>
+      <article class="bloco b5 revela">
+        <span class="sub">O mercado</span>
+        <h3 class="termo" lang="kmb">Kitanda</h3>
+        <p>O mercado ao ar livre, onde as quitandeiras vendem jinguba, bombó, peixe seco, fruta e panos. A palavra viajou até ao Brasil e ficou: quitanda.</p>
+      </article>
+    </div>
+
+    <div class="costumes-cab revela">
+      <h3>Costumes do dia a dia</h3>
+      <p>Como se vive, se decide, se brinca e se faz à mão no Kwanza Norte.</p>
+    </div>
+    <div class="costumes">
+      <article class="costume revela"><span class="sub">A autoridade tradicional</span><h4 lang="kmb">Soba</h4><p>Em cada aldeia há um soba. Com os mais velhos, ouve as partes e resolve as makas da comunidade, das terras às questões de família.</p></article>
+      <article class="costume revela"><span class="sub">Respeito aos mais velhos</span><h4 lang="kmb">Kota</h4><p>Cumprimenta-se primeiro o mais velho, e é ele quem fala primeiro numa reunião. Chamar alguém de kota é sinal de respeito.</p></article>
+      <article class="costume revela"><span class="sub">A família alargada</span><h4>Linhagem</h4><p>Entre os ambundu, a linhagem passa tradicionalmente pela mãe. Tios maternos, primos e avós fazem parte do dia a dia e das decisões importantes.</p></article>
+      <article class="costume revela"><span class="sub">O luto em comunidade</span><h4>Óbito</h4><p>Quando alguém morre, família, vizinhos e amigos juntam-se durante dias na casa do óbito: cozinha-se, canta-se e ninguém deixa a família sozinha.</p></article>
+      <article class="costume revela"><span class="sub">Jogo de covas e sementes</span><h4 lang="kmb">Kiela</h4><p>Um tabuleiro de covas, escavado na madeira ou no chão, jogado com sementes ou pedrinhas. Ganha quem souber contar e prever as jogadas.</p></article>
+      <article class="costume revela"><span class="sub">Artes da mão</span><h4>Cestos e barro</h4><p>Cestos de palmeira e de ráfia, panelas de barro e esteiras fazem-se à mão e vendem-se nas kitandas e à beira da estrada.</p></article>
+      <article class="costume revela"><span class="sub">A vida no campo</span><h4>Lavra</h4><p>A lavra da família dá mandioca, milho, feijão, jinguba e banana. Trabalha-se cedo, antes do calor, e a colheita reparte-se com os parentes.</p></article>
+      <article class="costume revela"><span class="sub">O saber das ervas</span><h4 lang="kmb">Kimbanda</h4><p>O curandeiro tradicional, que conhece as plantas da mata e as práticas antigas de cura, ainda procurado ao lado do posto de saúde.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- MESA -->
+<section class="sec" id="mesa">
+  <span class="sec-marca" aria-hidden="true">Kudia</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho"><span lang="kmb">Kudia</span> · à mesa</p>
+      <h2>Funje, dendém e jindungo por perto</h2>
+      <p class="sec-intro">A cozinha do Kwanza Norte vem da lavra e do rio: mandioca, folhas, peixe seco, galinha de quintal, óleo de palma e jinguba. Toca num prato para ver como se come.</p>
+    </header>
+    <div class="pratos" id="pratos"></div>
+
+    <div class="cafe revela">
+      <div>
+        <p class="olho">Ouro verde da serra</p>
+        <h3>Café de Cazengo</h3>
+        <p>Nas encostas húmidas de Cazengo e do Golungo Alto, o café robusta cresce à sombra das árvores grandes da mata. As roças antigas marcaram a paisagem, a economia e as estradas da província.</p>
+        <div class="cafe-num"><b>Top 4</b><span>No início dos anos 1970, Angola estava entre os quatro maiores produtores de café do mundo.</span></div>
+      </div>
+      <div class="graos" id="graos" aria-hidden="true"></div>
+    </div>
+
+    <div class="receita revela">
+      <div>
+        <p class="olho">Receita de família</p>
+        <h3>Muamba de galinha</h3>
+        <div class="receita-meta"><span>4 pessoas</span><span>≈ 1 h 15 min</span><span>Com funje</span></div>
+        <ul class="ingredientes">
+          <li><label><input type="checkbox" id="ing-1"><span>1 galinha de quintal (≈ 1,5 kg) em pedaços</span></label></li>
+          <li><label><input type="checkbox" id="ing-2"><span>1 chávena de óleo de palma (dendém)</span></label></li>
+          <li><label><input type="checkbox" id="ing-3"><span>2 cebolas e 3 tomates maduros</span></label></li>
+          <li><label><input type="checkbox" id="ing-4"><span>4 dentes de alho e 1 limão</span></label></li>
+          <li><label><input type="checkbox" id="ing-5"><span>300 g de abóbora em cubos</span></label></li>
+          <li><label><input type="checkbox" id="ing-6"><span>200 g de quiabos</span></label></li>
+          <li><label><input type="checkbox" id="ing-7"><span>Jindungo e sal a gosto</span></label></li>
+        </ul>
+      </div>
+      <ol class="passos">
+        <li><div><b>Temperar</b><p>Tempera a galinha com alho pisado, sal, sumo de limão e jindungo. Deixa repousar meia hora.</p></div></li>
+        <li><div><b>Alourar</b><p>Aquece o óleo de palma numa panela larga e aloura os pedaços de galinha de todos os lados.</p></div></li>
+        <li><div><b>Refogar</b><p>Junta a cebola e o tomate picados e deixa refogar até o tomate se desfazer no óleo.</p></div></li>
+        <li><div><b>Cozer devagar</b><p>Acrescenta a abóbora e um pouco de água. Tapa e coze em lume brando cerca de 30 minutos.</p></div></li>
+        <li><div><b>Quiabo no fim</b><p>Junta os quiabos cortados nos últimos 10 minutos, para não desfazerem. Acerta o sal.</p></div></li>
+        <li><div><b>Servir</b><p>Serve bem quente, com funje acabado de mexer e jindungo à parte para quem gosta.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- PANOS -->
+<section class="sec sec-alt" id="panos">
+  <span class="sec-marca" aria-hidden="true">Mulele</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho"><span lang="kmb">Mulele</span> · os panos</p>
+      <h2>O pano é roupa, colo, presente e memória</h2>
+      <p class="sec-intro">Antes de ser moda, o pano já foi dinheiro. Hoje veste festas, embrulha bebés às costas, entra na lista do alambamento e diz muito sobre quem o usa.</p>
+    </header>
+    <div class="panos-info">
+      <article class="info-pano revela">
+        <div class="amostra"><canvas data-padrao="libongo" data-paleta="rafia" data-p="20"></canvas></div>
+        <div class="info-corpo"><span class="sub">O pano-moeda</span><h3 lang="kmb">Libongo</h3><p>Antes das moedas, tecidos de ráfia feitos à mão serviam de dinheiro no Ndongo e no Kongo. Em Luanda, no século XVII, ainda se pagava em panos de libongo.</p></div>
+      </article>
+      <article class="info-pano revela">
+        <div class="amostra"><canvas data-padrao="losango" data-paleta="samakaka" data-p="18"></canvas></div>
+        <div class="info-corpo"><span class="sub">O padrão de Angola</span><h3>Samakaka</h3><p>O estampado angolano mais reconhecível: losangos e ziguezagues em vermelho, preto, amarelo e azul. Veste festas, alambamentos e desfiles de moda.</p></div>
+      </article>
+      <article class="info-pano revela">
+        <div class="amostra"><canvas data-padrao="escama" data-paleta="dende" data-p="16"></canvas></div>
+        <div class="info-corpo"><span class="sub">O traje tradicional</span><h3>Bessangana</h3><p>O traje das senhoras kimbundu de Luanda e do Kwanza: vários panos amarrados à cintura, blusa larga e lenço na cabeça. Vestir bessangana é mostrar elegância e respeito pela tradição.</p></div>
+      </article>
+      <article class="info-pano revela">
+        <div class="amostra"><canvas data-padrao="ziguezague" data-paleta="kwanza" data-p="22"></canvas></div>
+        <div class="info-corpo"><span class="sub">O pano de carregar</span><h3>Nas costas da mãe</h3><p>O pano é berço: o bebé vai bem amarrado, embalado pelo andar, enquanto as mãos ficam livres para a lavra e para a kitanda.</p></div>
+      </article>
+    </div>
+
+    <div class="tear" id="tear">
+      <div class="tear-quadro">
+        <div class="tear-barra" aria-hidden="true"></div>
+        <div class="tear-tela"><canvas id="tear-canvas" role="img" aria-label="Pano gerado no tear"></canvas><div class="lancadeira" id="lancadeira"></div></div>
+        <div class="tear-franja" aria-hidden="true"></div>
+      </div>
+      <div class="tear-ctl">
+        <div class="tear-nome">
+          <p class="olho">Tear digital · cria o teu pano</p>
+          <h3 id="pano-nome">Pano Muxima</h3>
+          <p id="pano-sentido"><span lang="kmb">muxima</span> quer dizer coração</p>
+        </div>
+        <fieldset>
+          <legend>Padrão</legend>
+          <div class="chips" id="ctl-padrao"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Cores</legend>
+          <div class="chips" id="ctl-paleta"></div>
+        </fieldset>
+        <div class="deslizar">
+          <div class="deslizar-cab"><label class="rotulo" for="tear-ponto">Tamanho do ponto</label><output id="out-ponto" for="tear-ponto">8 px</output></div>
+          <input type="range" id="tear-ponto" min="4" max="14" step="1" value="8">
+        </div>
+        <div class="deslizar">
+          <div class="deslizar-cab"><label class="rotulo" for="tear-rep">Repetição do motivo</label><output id="out-rep" for="tear-rep">18 fios</output></div>
+          <input type="range" id="tear-rep" min="8" max="32" step="2" value="18">
+        </div>
+        <div class="tear-acoes">
+          <button class="btn btn-forte" type="button" id="tear-tecer">Tecer de novo</button>
+          <button class="btn" type="button" id="tear-sorte">Surpreende-me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LÍNGUA -->
+<section class="sec" id="lingua">
+  <span class="sec-marca" aria-hidden="true">Kuzuela</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho"><span lang="kmb">Kuzuela</span> · falar</p>
+      <h2>Kimbundu que já falas sem saber</h2>
+      <p class="sec-intro">O kimbundu é a língua dos ambundu e uma das línguas nacionais de Angola. Fala-se no Kwanza Norte, em Luanda, no Bengo e em Malanje, e deixou muitas palavras no português do dia a dia.</p>
+    </header>
+    <div class="palavras">
+      <div class="palavra revela"><b lang="kmb">kota</b><span>O mais velho, a quem se deve respeito.</span></div>
+      <div class="palavra revela"><b lang="kmb">kandengue</b><span>O mais novo, a criança.</span></div>
+      <div class="palavra revela"><b lang="kmb">kamba</b><span>Amigo. <i>Kamba diami</i>: meu amigo.</span></div>
+      <div class="palavra revela"><b lang="kmb">maka</b><span>Problema, discussão, assunto por resolver.</span></div>
+      <div class="palavra revela"><b lang="kmb">mujimbo</b><span>Boato, notícia que corre de boca em boca.</span></div>
+      <div class="palavra revela"><b lang="kmb">kitanda</b><span>Mercado. Em português ficou quitanda.</span></div>
+      <div class="palavra revela"><b lang="kmb">kizomba</b><span>Festa, convívio.</span></div>
+      <div class="palavra revela"><b lang="kmb">muxima</b><span>Coração.</span></div>
+      <div class="palavra revela"><b lang="kmb">cubata</b><span>Casa, de <i>kubata</i>.</span></div>
+      <div class="palavra revela"><b lang="kmb">jindungo</b><span>Piri-piri, de <i>jindungu</i>.</span></div>
+      <div class="palavra revela"><b lang="kmb">jinguba</b><span>Amendoim.</span></div>
+      <div class="palavra revela"><b lang="kmb">kalunga</b><span>O mar. Também o além, o lugar dos antepassados.</span></div>
+    </div>
+
+    <div class="numeros-cab revela">
+      <h3>Contar de 1 a 10</h3>
+      <p>Toca num número para ouvir uma pronúncia aproximada.</p>
+    </div>
+    <div class="numeros revela" id="numeros"></div>
+
+    <div class="pronuncia revela">
+      <div><b>x soa a “ch”</b><p><i lang="kmb">Xala</i> diz-se “chala”; <i lang="kmb">muxima</i>, “muchima”.</p></div>
+      <div><b>nz, nd, mb, ng</b><p>São sons nasais que começam a palavra: <i lang="kmb">Nzambi</i>, <i lang="kmb">ndé</i>, <i lang="kmb">mbiji</i>, <i lang="kmb">ngola</i>. Diz-se tudo junto, sem vogal antes.</p></div>
+      <div><b>k é sempre duro</b><p>Como em “casa”: <i lang="kmb">kiambote</i>, <i lang="kmb">kamba</i>, <i lang="kmb">kitanda</i>. As grafias variam: kiambote ou kyambote, uala ou wala.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADUTOR -->
+<section class="sec sec-alt" id="tradutor">
+  <span class="sec-marca" aria-hidden="true">Tuende</span>
+  <div class="wrap">
+    <header class="sec-cab revela">
+      <p class="olho">Tradutor de bolso</p>
+      <h2>Português ⇄ kimbundu</h2>
+      <p class="sec-intro">Escreve uma frase. O tradutor procura primeiro expressões inteiras e depois palavra a palavra, num glossário de <span id="n-entradas">90</span> entradas. O que não conhece fica como está, sublinhado a pontilhado.</p>
+    </header>
+    <div class="estudio">
+      <div class="painel" id="painel-tradutor">
+        <div class="faixa" aria-hidden="true"></div>
+        <div class="painel-corpo">
+          <div class="direcao">
+            <span class="lado" id="lado-de">Português</span>
+            <button class="trocar" type="button" id="trocar" aria-label="Trocar o sentido da tradução">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h13l-3.5-3.5M19 16H6l3.5 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <span class="lado para" id="lado-para">Kimbundu</span>
+          </div>
+          <div class="campo">
+            <label for="entrada" id="rot-entrada">Escreve em português</label>
+            <textarea id="entrada" spellcheck="false">Bom dia! Estou com fome, vamos comer funje.</textarea>
+            <div class="exemplos" id="exemplos"></div>
+          </div>
+          <div class="saida-caixa">
+            <div class="saida-cab">
+              <span class="olho" id="rot-saida">Em kimbundu</span>
+              <div class="acoes">
+                <button class="btn" type="button" id="ouvir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Ouvir</button>
+                <button class="btn" type="button" id="copiar"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" fill="none" stroke="currentColor" stroke-width="2"/></svg>Copiar</button>
+              </div>
+            </div>
+            <p class="saida" id="saida" aria-live="polite"></p>
+            <div class="medidor">
+              <div class="medidor-barra"><i id="medidor-i"></i></div>
+              <p id="medidor-txt"></p>
+            </div>
+            <ul class="pares" id="pares" aria-label="Correspondências encontradas"></ul>
+          </div>
+          <p class="aviso-kmb">Um glossário para aprender e brincar. O kimbundu muda de região para região e a voz é portuguesa, por isso a pronúncia é aproximada. Confirma sempre com quem fala a língua.</p>
+          <details class="glossario">
+            <summary>Ver o glossário completo</summary>
+            <input class="glossario-busca" id="busca" type="search" placeholder="Procurar em português ou kimbundu" aria-label="Procurar no glossário">
+            <div class="tabela"><table><thead><tr><th>Português</th><th>Kimbundu</th><th>Tema</th></tr></thead><tbody id="tabela-corpo"></tbody></table></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="painel" id="painel-dialogos">
+        <div class="faixa" aria-hidden="true"></div>
+        <div class="painel-corpo">
+          <div class="abas" role="tablist" aria-label="Diálogos" id="abas"></div>
+          <div class="conversa" id="conversa" role="tabpanel" aria-live="polite"></div>
+          <div class="dialogo-rodape">
+            <button class="btn btn-forte" type="button" id="reproduzir"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>Reproduzir diálogo</button>
+            <label class="alternar"><input type="checkbox" id="mostrar-pt" checked>Mostrar português</label>
+          </div>
+          <p class="dica">Toca numa fala para a levar ao tradutor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVAR NO TELEMÓVEL -->
+<section class="sec" id="levar">
+  <span class="sec-marca" aria-hidden="true">Kamba</span>
+  <div class="wrap levar">
+    <div class="levar-txt revela">
+      <p class="olho">Leva o Kwanza Norte contigo</p>
+      <h2>Aponta a câmara e abre no telemóvel</h2>
+      <p>Este código QR abre o site em qualquer telemóvel, tablet ou computador. Mostra-o no ecrã, imprime-o num cartaz ou cola-o na entrada da kitanda.</p>
+      <ol class="passos-qr">
+        <li>Abre a câmara do telemóvel.</li>
+        <li>Aponta para o código durante um segundo.</li>
+        <li>Toca no link que aparece.</li>
+      </ol>
+      <div class="campo">
+        <label for="qr-url">Endereço do site</label>
+        <div class="url-linha">
+          <input id="qr-url" type="url" inputmode="url" spellcheck="false" placeholder="https://o-teu-dominio.ao">
+          <button class="btn btn-forte" type="button" id="qr-copiar">Copiar link</button>
+        </div>
+      </div>
+    </div>
+    <figure class="qr-cartao revela" style="margin:0">
+      <div class="faixa" aria-hidden="true"></div>
+      <div class="qr-papel">
+        <div id="qr" role="img" aria-label="Código QR com o endereço do site"></div>
+        <p>Wazekele kiambote!</p>
+        <small id="qr-legenda"></small>
+      </div>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="faixa" aria-hidden="true"></div>
+  <div class="wrap rodape-in">
+    <p class="adeus" lang="kmb">Xala<span>kiambote</span></p>
+    <div>
+      <p><b>Fica bem.</b> Uma página para celebrar o Kwanza Norte: a sua terra, a sua mesa, os seus panos e a sua língua.</p>
+      <p style="margin-top:10px">O kimbundu aqui usado é simplificado e as grafias variam. Para aprender a sério, conversa com os mais velhos.</p>
+    </div>
+  </div>
+</footer>
+<div class="aviso" id="aviso" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(() => {
+"use strict";
+const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const mod = (a, n) => ((a % n) + n) % n;
+const dprMax = () => Math.min(2, window.devicePixelRatio || 1);
+function semente(a){ return function(){ a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+/* ---------- Aviso ---------- */
+const aviso = $('#aviso'); let avisoT;
+function avisar(txt){ aviso.textContent = txt; aviso.hidden = false; aviso.style.animation = 'none'; void aviso.offsetWidth; aviso.style.animation = ''; clearTimeout(avisoT); avisoT = setTimeout(() => aviso.hidden = true, 2200); }
+
+/* ---------- Voz ---------- */
+function falar(txt, botao){
+  try{
+    if(!('speechSynthesis' in window)){ avisar('Este navegador não tem voz disponível.'); return; }
+    const u = new SpeechSynthesisUtterance(txt);
+    u.lang = 'pt-PT'; u.rate = .82;
+    const v = speechSynthesis.getVoices().find(v => /^pt/i.test(v.lang));
+    if(v) u.voice = v;
+    speechSynthesis.cancel();
+    if(botao){ botao.classList.add('a-falar'); u.onend = u.onerror = () => botao.classList.remove('a-falar'); }
+    speechSynthesis.speak(u);
+  }catch(e){ avisar('Não foi possível reproduzir a voz.'); }
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-falar]'); if(b) falar(b.dataset.falar, b); });
+
+/* ---------- Motor de padrões (o tear) ---------- */
+const PALETAS = {
+  samakaka:{nome:'Samakaka', cores:['#C42B1C','#1E1410','#E8A317','#1D4B9B','#F3E6D0']},
+  cazengo:{nome:'Café de Cazengo', cores:['#3B2416','#8A5530','#D29A5A','#2E6B3B','#EFDDBF']},
+  kwanza:{nome:'Rio Kwanza', cores:['#0D3553','#1F6FA6','#8CCBDD','#EBDDBB','#C42B1C']},
+  dende:{nome:'Dendém', cores:['#D9561E','#F2A81D','#7A1E12','#F7E4C2','#2B1A12']},
+  noite:{nome:'Noite', cores:['#111733','#2C4384','#E8A317','#F3E6D0','#9A2D1F']},
+  rafia:{nome:'Ráfia', cores:['#D8C29A','#A88452','#6B4A2B','#EFE3C6','#3B2A1A']}
+};
+const PADROES = {
+  losango:{nome:'Losango', f:(i,j,P,n,fs) => { const u = mod(i,P) - P/2 + .5, v = mod(j,P) - P/2 + .5; return mod(Math.floor((Math.abs(u) + Math.abs(v)) / Math.max(1, P/8) - fs), n); }},
+  ziguezague:{nome:'Ziguezague', f:(i,j,P,n,fs) => { const t = Math.abs(mod(i,P) - P/2 + .5); return mod(Math.floor((j + t) / Math.max(1, P/6) - fs), n); }},
+  escama:{nome:'Escama', f:(i,j,P,n,fs) => { const H = Math.max(2, Math.round(P/2)), r = Math.floor(j/H), u = mod(i + (r & 1) * Math.round(P/2), P) - P/2 + .5, v = mod(j,H) + .5; return mod(Math.floor(Math.hypot(u, v) / Math.max(1, P/9) + (r & 1) * 2 - fs), n); }},
+  libongo:{nome:'Libongo', f:(i,j,P,n,fs) => { const b = Math.max(1, Math.round(P/5)); return ((i + j) & 1) ? mod(Math.floor(i/b) - fs, n) : mod(Math.floor(j/b) + 2, n); }}
+};
+function pintar(ctx, o){
+  const {W, H, s, padrao, cores, P, fase = 0, textura = true} = o;
+  const f = PADROES[padrao].f, n = cores.length;
+  const cols = Math.ceil(W / s), rows = Math.ceil(H / s);
+  const j0 = o.j0 || 0, j1 = Math.min(o.j1 == null ? rows : o.j1, rows);
+  for(let j = j0; j < j1; j++) for(let i = 0; i < cols; i++){ ctx.fillStyle = cores[f(i, j, P, n, fase)]; ctx.fillRect(i*s, j*s, s, s); }
+  if(textura && s >= 4){
+    const a = Math.ceil(s * .4), b = s - a;
+    ctx.fillStyle = 'rgba(255,255,255,.10)';
+    for(let j = j0; j < j1; j++) for(let i = (j & 1); i < cols; i += 2) ctx.fillRect(i*s, j*s, s, a);
+    ctx.fillStyle = 'rgba(0,0,0,.13)';
+    for(let j = j0; j < j1; j++) for(let i = 1 - (j & 1); i < cols; i += 2) ctx.fillRect(i*s + b, j*s, a, s);
+  }
+  return rows;
+}
+function azulejo(W, H, o){ const c = document.createElement('canvas'); c.width = W; c.height = H; pintar(c.getContext('2d'), {...o, W, H}); return c.toDataURL(); }
+function ajustar(cv){ const r = cv.getBoundingClientRect(), d = dprMax(); const W = Math.max(1, Math.round(r.width * d)), H = Math.max(1, Math.round(r.height * d)); if(cv.width !== W || cv.height !== H){ cv.width = W; cv.height = H; } return {W, H, d}; }
+
+// texturas partilhadas pelo CSS
+try{
+  const raiz = document.documentElement.style;
+  raiz.setProperty('--faixa-img', `url(${azulejo(120, 30, {s:3, padrao:'ziguezague', cores:PALETAS.samakaka.cores, P:20, textura:false})})`);
+  raiz.setProperty('--pano-texto', `url(${azulejo(64, 64, {s:4, padrao:'losango', cores:['#C42B1C','#E8A317','#1D4B9B','#C42B1C','#2E6B3B'], P:16})})`);
+}catch(e){}
+
+/* ---------- Herói: título vivo ---------- */
+const l1 = $('#titulo .l1'), l2 = $('#titulo .l2');
+l1.innerHTML = [...l1.textContent.trim()].map((c, i) => `<span class="letra${reduz ? '' : ' abre'}" style="--i:${i}">${esc(c)}</span>`).join('');
+const letras = $$('.letra', l1);
+letras.forEach(l => l.addEventListener('animationend', () => l.classList.remove('abre'), {once:true}));
+if(!reduz && matchMedia('(hover:hover) and (pointer:fine)').matches){
+  const hero = $('#inicio'); let raf = 0, mx = 0, my = 0;
+  const aplicar = () => {
+    raf = 0;
+    letras.forEach(l => {
+      if(l.classList.contains('abre')) return;
+      const r = l.getBoundingClientRect(); const d = Math.hypot(r.left + r.width/2 - mx, r.top + r.height/2 - my);
+      const t = Math.max(0, 1 - d / 300);
+      l.style.fontStretch = (94 + 50*t).toFixed(1) + '%';
+      l.style.fontWeight = Math.round(760 + 140*t);
+    });
+    const r2 = l2.getBoundingClientRect(); const t2 = Math.max(0, 1 - Math.abs(r2.top + r2.height/2 - my) / 260);
+    l2.style.fontStretch = (110 + 30*t2).toFixed(1) + '%';
+  };
+  hero.addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; if(!raf) raf = requestAnimationFrame(aplicar); });
+  hero.addEventListener('pointerleave', () => { letras.forEach(l => { l.style.fontStretch = ''; l.style.fontWeight = ''; }); l2.style.fontStretch = ''; });
+}
+
+/* ---------- Herói: pano a ondular ---------- */
+const heroCv = $('#pano-hero'), heroCtx = heroCv.getContext('2d');
+let heroFase = 0, heroVisivel = true, heroUlt = 0;
+function heroPinta(){ const {W, H, d} = ajustar(heroCv); pintar(heroCtx, {W, H, s:Math.round(9*d), padrao:'losango', cores:PALETAS.samakaka.cores, P:18, fase:heroFase}); }
+heroPinta();
+if(!reduz){
+  const loop = t => { if(heroVisivel && !document.hidden && t - heroUlt > 140){ heroUlt = t; heroFase += .25; heroPinta(); } requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+  new IntersectionObserver(es => es.forEach(e => heroVisivel = e.isIntersecting)).observe(heroCv);
+}
+new ResizeObserver(heroPinta).observe(heroCv);
+
+/* ---------- Amostras dos panos ---------- */
+function pintaAmostras(){ $$('.amostra canvas').forEach(cv => { const {W, H, d} = ajustar(cv); pintar(cv.getContext('2d'), {W, H, s:Math.round(6*d), padrao:cv.dataset.padrao, cores:PALETAS[cv.dataset.paleta].cores, P:+cv.dataset.p}); }); }
+pintaAmostras();
+$$('.amostra canvas').forEach(cv => new ResizeObserver(pintaAmostras).observe(cv));
+
+/* ---------- Revelar ao rolar ---------- */
+if(!reduz && 'IntersectionObserver' in window){
+  const vh = innerHeight;
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -6% 0px'});
+  $$('.revela').forEach(el => { if(el.getBoundingClientRect().top > vh){ el.classList.add('pre'); io.observe(el); } });
+}
+
+/* ---------- Navegação ativa ---------- */
+const navLinks = $$('.nav a');
+const ioNav = new IntersectionObserver(es => es.forEach(e => {
+  if(!e.isIntersecting) return;
+  navLinks.forEach(a => a.classList.toggle('ativo', a.getAttribute('href') === '#' + e.target.id && !a.classList.contains('nav-destaque')));
+}), {rootMargin:'-45% 0px -50% 0px'});
+['terra','tradicao','mesa','panos','lingua','tradutor'].forEach(id => { const s = document.getElementById(id); if(s) ioNav.observe(s); });
+
+/* ---------- O rio ---------- */
+const rio = $('#rio'), rioSvg = $('#rio-svg'), rioBase = $('.rio-base'), rioAgua = $('.rio-agua');
+let rioLen = 0, rioF = () => 0, rioPontos = [];
+function desenhaRio(){
+  const W = rio.clientWidth, H = rio.clientHeight; if(!W || !H) return;
+  rioSvg.setAttribute('viewBox', `0 0 ${W} ${H}`); rioSvg.setAttribute('width', W); rioSvg.setAttribute('height', H);
+  const largo = W >= 700, x0 = largo ? W/2 : 14, A = largo ? Math.min(40, W*.035) : 5;
+  rioF = y => x0 + A * Math.sin(y / H * Math.PI * 5 + .6);
+  let d = `M${rioF(0).toFixed(1)},0`; for(let y = 10; y <= H; y += 10) d += ` L${rioF(y).toFixed(1)},${y}`;
+  rioBase.setAttribute('d', d); rioAgua.setAttribute('d', d);
+  rioLen = rioAgua.getTotalLength(); rioAgua.style.strokeDasharray = rioLen;
+  rioPontos.forEach(p => p.el.remove()); rioPontos = [];
+  $$('.lugar', rio).forEach(l => { const y = l.offsetTop + Math.min(52, l.offsetHeight/2); const el = document.createElement('span'); el.className = 'ponto'; el.style.left = rioF(y) + 'px'; el.style.top = y + 'px'; rio.appendChild(el); rioPontos.push({el, y}); });
+  rioProgresso();
+}
+function rioProgresso(){
+  const r = rio.getBoundingClientRect(); let p = (innerHeight * .7 - r.top) / r.height; p = reduz ? 1 : Math.max(0, Math.min(1, p));
+  rioAgua.style.strokeDashoffset = rioLen * (1 - p);
+  const h = r.height * p; rioPontos.forEach(pt => pt.el.classList.toggle('aceso', pt.y <= h + 4));
+}
+let rioRaf = 0; addEventListener('scroll', () => { if(!rioRaf) rioRaf = requestAnimationFrame(() => { rioRaf = 0; rioProgresso(); }); }, {passive:true});
+new ResizeObserver(desenhaRio).observe(rio);
+document.fonts && document.fonts.ready.then(desenhaRio);
+
+/* ---------- Pratos ---------- */
+function bolha(cx, cy, r, sd, n = 9, w = .18){
+  const rnd = semente(sd), p = [];
+  for(let k = 0; k < n; k++){ const a = k/n * Math.PI*2, rr = r * (1 - w + rnd()*w*2); p.push([cx + Math.cos(a)*rr, cy + Math.sin(a)*rr]); }
+  let d = `M${p[0][0].toFixed(1)},${p[0][1].toFixed(1)}`;
+  for(let k = 0; k < n; k++){
+    const p0 = p[(k-1+n)%n], p1 = p[k], p2 = p[(k+1)%n], p3 = p[(k+2)%n];
+    d += `C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)},${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)},${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d + 'Z';
+}
+const espalha = (sd, qt, raio, fn) => { const rnd = semente(sd); let s = ''; for(let k = 0; k < qt; k++){ const a = rnd()*Math.PI*2, r = Math.sqrt(rnd())*raio; s += fn(100 + Math.cos(a)*r, 100 + Math.sin(a)*r, rnd); } return s; };
+function prato(acento, miolo){
+  let rim = '';
+  for(let k = 0; k < 28; k++){ const a = k/28*Math.PI*2, x = 100 + Math.cos(a)*79, y = 100 + Math.sin(a)*79; rim += `<rect x="${(x-3.2).toFixed(1)}" y="${(y-3.2).toFixed(1)}" width="6.4" height="6.4" style="fill:${k%2 ? acento : 'var(--tinta)'}" transform="rotate(45 ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }
+  return `<svg viewBox="0 0 200 204" aria-hidden="true"><ellipse cx="100" cy="194" rx="66" ry="7" style="fill:var(--sombra)"/><circle cx="100" cy="100" r="89" style="fill:var(--prato);stroke:var(--tinta);stroke-width:2"/>${rim}<circle cx="100" cy="100" r="71" style="fill:var(--prato-in)"/>${miolo}</svg>`;
+}
+const peixe = (x, y, ang, L) => `<g transform="translate(${x} ${y}) rotate(${ang})"><path d="M${L*.85},0 L${L*1.45},${-L*.42} L${L*1.4},${L*.42}Z" fill="#6E5A42"/><ellipse rx="${L}" ry="${L*.38}" fill="#8C7356"/><path d="M${-L*.35},${-L*.3} q5,${L*.3} 0,${L*.6}" stroke="#5E4A35" stroke-width="1.6" fill="none"/><circle cx="${-L*.62}" cy="-2" r="2.3" fill="#1E1410"/></g>`;
+const PRATOS = [
+  {nome:'Funje', tag:'funji', acento:'#E8A317', desc:'Massa lisa de fuba de bombó (mandioca) mexida em água a ferver. Acompanha quase tudo.',
+    come:'Tira-se um pedaço e mergulha-se no molho da muamba, do calulu ou do feijão. Come-se quente, logo depois de mexido.', ing:['fuba de bombó','água a ferver','o mexe-funje, uma colher de pau comprida'],
+    svg:() => `<path d="${bolha(143,132,19,11,8,.2)}" fill="#C9471A"/><path d="${bolha(96,96,47,3,10,.1)}" fill="#E9DDC4" stroke="rgba(0,0,0,.14)" stroke-width="1.5"/><path d="${bolha(93,93,37,5,10,.1)}" fill="#F6EEDC"/><ellipse cx="80" cy="80" rx="13" ry="6.5" fill="#FFFFFF" opacity=".6" transform="rotate(-32 80 80)"/>`},
+  {nome:'Muamba de galinha', tag:'sanji · galinha', acento:'#C42B1C', desc:'Galinha de quintal cozida em óleo de palma com quiabo, abóbora, alho e jindungo. O prato das grandes ocasiões.',
+    come:'Num prato fundo, com funje, deixando o molho vermelho cobrir tudo.', ing:['galinha de quintal','óleo de palma (dendém)','quiabo e abóbora','jindungo'],
+    svg:() => { let s = `<path d="${bolha(100,100,60,21,11,.08)}" fill="#B23A14"/><path d="${bolha(100,100,46,22,9,.16)}" fill="#D9561E" opacity=".75"/>`;
+      [[110,108],[72,114],[118,74]].forEach(([x,y],k) => s += `<rect x="${x-6}" y="${y-6}" width="12" height="12" rx="3" fill="#F2A33A" transform="rotate(${k*23} ${x} ${y})"/>`);
+      [[80,84,17,1],[124,90,15,2],[96,126,18,3],[136,124,11,4]].forEach(([x,y,r,sd]) => s += `<path d="${bolha(x,y,r,sd*7,8,.25)}" fill="#7A3B17"/><path d="${bolha(x-3,y-4,r*.5,sd*9,7,.3)}" fill="#A2582A"/>`);
+      [[62,98],[142,104],[114,142],[86,62],[120,62]].forEach(([x,y]) => s += `<circle cx="${x}" cy="${y}" r="6.5" fill="#5E8F33"/><circle cx="${x}" cy="${y}" r="3" fill="#CFE3A0"/>`);
+      return s; }},
+  {nome:'Kizaka', tag:'kizaka', acento:'#2E6B3B', desc:'Folhas de mandioca piladas e cozidas devagar, temperadas com jinguba ou óleo de palma.',
+    come:'Com funje e peixe seco ou carne. Quanto mais tempo coze, melhor fica.', ing:['folhas tenras de mandioca','jinguba pilada ou óleo de palma','cebola, alho e sal'],
+    svg:() => `<path d="${bolha(100,100,58,31,12,.1)}" fill="#26461F"/>` + espalha(77, 80, 52, (x,y,r) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.4+r()*2.6).toFixed(1)}" fill="${r() > .5 ? '#4B7A33' : '#1A3316'}"/>`) + `<path d="${bolha(78,118,9,41,7,.3)}" fill="#D9761E" opacity=".85"/><path d="${bolha(126,84,7,42,7,.3)}" fill="#D9761E" opacity=".85"/><path d="${bolha(118,128,5,43,7,.3)}" fill="#D9761E" opacity=".85"/>`},
+  {nome:'Calulu', tag:'mbiji · peixe', acento:'#1D4B9B', desc:'Camadas de peixe seco e fresco cozidas com tomate, cebola, quiabo, gimboa e óleo de palma.',
+    come:'Com funje ou batata-doce, e um fio de óleo de palma por cima.', ing:['peixe seco e peixe fresco','gimboa e quiabo','tomate e cebola','óleo de palma'],
+    svg:() => `<path d="${bolha(100,100,60,51,11,.08)}" fill="#A63A1A"/>` + espalha(52, 9, 50, (x,y,r) => `<path d="${bolha(x,y,4+r()*4,Math.floor(r()*999),6,.3)}" fill="#D23A26"/>`) + `<ellipse cx="66" cy="76" rx="15" ry="6" fill="#4E8A3A" transform="rotate(-30 66 76)"/><ellipse cx="136" cy="128" rx="14" ry="5.5" fill="#4E8A3A" transform="rotate(35 136 128)"/><ellipse cx="72" cy="132" rx="12" ry="5" fill="#5E9A44" transform="rotate(60 72 132)"/>` + peixe(92, 86, -18, 26) + peixe(112, 124, 160, 22)},
+  {nome:'Kitaba', tag:'jinguba · amendoim', acento:'#B97B44', desc:'Jinguba torrada e pilada com jindungo e sal até virar pasta. Petisco forte para acompanhar a conversa.',
+    come:'À colher, com mandioca cozida ou pão, e devagar por causa do picante.', ing:['jinguba torrada','jindungo','sal'],
+    svg:() => `<circle cx="100" cy="100" r="56" fill="#4A2E1E"/><circle cx="100" cy="100" r="47" fill="#B97B44"/><path d="M100 100 m0 -6 a6 6 0 1 1 -6 6 a12 12 0 1 1 12 12 a18 18 0 1 1 -18 -18 a26 26 0 1 1 26 26" fill="none" stroke="#8E5528" stroke-width="3" stroke-linecap="round"/>` + espalha(91, 16, 38, (x,y,r) => `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="4" height="2" fill="#D62E1E" transform="rotate(${Math.round(r()*180)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`) + `<ellipse cx="128" cy="72" rx="6" ry="4" fill="#E2B57A" transform="rotate(30 128 72)"/><ellipse cx="72" cy="128" rx="6" ry="4" fill="#E2B57A" transform="rotate(-20 72 128)"/>`},
+  {nome:'Feijão de óleo de palma', tag:'makunde · feijão', acento:'#D9561E', desc:'Feijão cozido até ficar macio e depois apurado em óleo de palma. Simples e de todos os dias.',
+    come:'Com farinha musseque, banana-pão ou peixe frito.', ing:['feijão','óleo de palma','cebola e alho','sal'],
+    svg:() => `<path d="${bolha(96,104,56,61,11,.08)}" fill="#C9671C"/><path d="${bolha(96,104,44,62,9,.14)}" fill="#E08A2C" opacity=".6"/>` + espalha(63, 55, 46, (x,y,r) => `<ellipse cx="${(x-4).toFixed(1)}" cy="${(y+4).toFixed(1)}" rx="5.2" ry="3.4" fill="${r() > .5 ? '#5A2C16' : '#74391D'}" transform="rotate(${Math.round(r()*180)} ${(x-4).toFixed(1)} ${(y+4).toFixed(1)})"/>`) + `<ellipse cx="146" cy="70" rx="15" ry="10" fill="#F0BE48" stroke="#8A5A1E" stroke-width="2.5"/><ellipse cx="152" cy="98" rx="13" ry="9" fill="#F0BE48" stroke="#8A5A1E" stroke-width="2.5"/>`},
+  {nome:'Kissângua', tag:'kunua · beber', acento:'#E8A317', desc:'Bebida fermentada de fuba de milho, levemente ácida e muito refrescante. Faz-se em casa e bebe-se fresca.',
+    come:'Em caneca ou cabaça, ao fim da tarde, depois de um dia de calor.', ing:['fuba de milho','água','açúcar','tempo para fermentar'],
+    svg:() => `<circle cx="100" cy="100" r="54" fill="#8A5A35" stroke="#5E3A20" stroke-width="3"/><circle cx="100" cy="100" r="45" fill="#E7D6A2"/>` + espalha(17, 22, 26, (x,y,r) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(2+r()*3.5).toFixed(1)}" fill="#F7EED2" stroke="#D9C68E" stroke-width=".8"/>`) + `<rect x="150" y="56" width="7" height="9" rx="3" fill="#F2C531"/><rect x="160" y="70" width="7" height="9" rx="3" fill="#F2C531" transform="rotate(20 163 74)"/><rect x="42" y="140" width="7" height="9" rx="3" fill="#F2C531" transform="rotate(-25 45 144)"/>`},
+  {nome:'Maruvo', tag:'kizomba · festa', acento:'#2E6B3B', desc:'Vinho de palmeira, tirado da seiva da palmeira e bebido fresco nas festas e nas conversas dos mais velhos.',
+    come:'Fresco, no próprio dia em que é tirado: com as horas fermenta e fica mais forte.', ing:['seiva de palmeira','cabaça para recolher','paciência'],
+    svg:() => { let s = `<path d="M38 162 L162 38" stroke="#3E7A33" stroke-width="3.5" stroke-linecap="round"/>`; for(let k = 0; k < 12; k++){ const t = .08 + k*.075, x = 38 + 124*t, y = 162 - 124*t, sg = k%2 ? 1 : -1; s += `<path d="M${x.toFixed(1)} ${y.toFixed(1)} q${8*sg} ${8*sg} ${22*sg} ${8*sg}" stroke="#4E8A3A" stroke-width="3" fill="none" stroke-linecap="round"/>`; }
+      return s + `<circle cx="100" cy="100" r="50" fill="#A97E3F" stroke="#6E4F22" stroke-width="3"/><circle cx="100" cy="100" r="40" fill="#F2EDE2"/>` + espalha(29, 12, 28, (x,y,r) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.5+r()*2.5).toFixed(1)}" fill="#FFFFFF" stroke="#E0D6C2" stroke-width=".8"/>`); }}
+];
+const pratosEl = $('#pratos');
+pratosEl.innerHTML = PRATOS.map((p, k) => `
+  <article class="prato revela" role="button" tabindex="0" aria-pressed="false" aria-label="${esc(p.nome)}: virar para ver como se come">
+    <div class="prato-in">
+      <div class="face frente">${prato(p.acento, p.svg())}<h3>${esc(p.nome)}</h3><span class="kmb-tag" lang="kmb">${esc(p.tag)}</span><p class="desc">${esc(p.desc)}</p><span class="virar">↻ Virar</span></div>
+      <div class="face verso"><h3>${esc(p.nome)}</h3><h4>Como se come</h4><p>${esc(p.come)}</p><h4>O essencial</h4><ul>${p.ing.map(i => `<li>${esc(i)}</li>`).join('')}</ul><span class="virar">↻ Voltar</span></div>
+    </div>
+  </article>`).join('');
+const virar = el => { const v = el.classList.toggle('virado'); el.setAttribute('aria-pressed', v); };
+$$('.prato', pratosEl).forEach(el => {
+  el.addEventListener('click', () => virar(el));
+  el.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); virar(el); } });
+});
+if(!reduz && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -6% 0px'});
+  $$('.prato', pratosEl).forEach((el, k) => { el.style.transitionDelay = (k % 4) * 80 + 'ms'; if(el.getBoundingClientRect().top > innerHeight){ el.classList.add('pre'); io.observe(el); } });
+}
+
+/* ---------- Grãos de café ---------- */
+const graos = $('#graos'); { const rnd = semente(1975); let s = ''; for(let k = 0; k < 14; k++){ s += `<span class="grao" style="left:${(rnd()*86).toFixed(1)}%;top:${(rnd()*80).toFixed(1)}%;--r:${Math.round(rnd()*360)}deg;--d:${(-rnd()*9).toFixed(2)}s;scale:${(.7 + rnd()*.6).toFixed(2)}"></span>`; } graos.innerHTML = s; }
+
+/* ---------- Receita: lista guardada ---------- */
+const CH_REC = 'kn-muamba';
+let marcados = {}; try{ marcados = JSON.parse(localStorage.getItem(CH_REC) || '{}') || {}; }catch(e){}
+$$('.ingredientes input').forEach(cb => { cb.checked = !!marcados[cb.id]; cb.addEventListener('change', () => { marcados[cb.id] = cb.checked; try{ localStorage.setItem(CH_REC, JSON.stringify(marcados)); }catch(e){} }); });
+
+/* ---------- Tear ---------- */
+const NOMES = [['Muxima','coração'],['Ngolo','força'],['Dikumbi','sol'],['Mbeji','lua'],['Nvula','chuva'],['Kalunga','mar'],['Kiambote','o que é bom'],['Kamba','amigo'],['Kizomba','festa'],['Ixi','terra'],['Menha','água'],['Tubia','fogo']];
+const tear = {padrao:'losango', paleta:'samakaka', ponto:8, rep:18};
+const tearCv = $('#tear-canvas'), tearCtx = tearCv.getContext('2d'), lanc = $('#lancadeira');
+const ctlPad = $('#ctl-padrao'), ctlPal = $('#ctl-paleta');
+ctlPad.innerHTML = Object.entries(PADROES).map(([k, p]) => `<input type="radio" name="padrao" id="pad-${k}" value="${k}"${k === tear.padrao ? ' checked' : ''}><label for="pad-${k}">${p.nome}</label>`).join('');
+ctlPal.innerHTML = Object.entries(PALETAS).filter(([k]) => k !== 'rafia').map(([k, p]) => `<input type="radio" name="paleta" id="pal-${k}" value="${k}"${k === tear.paleta ? ' checked' : ''}><label for="pal-${k}"><span class="cores" aria-hidden="true">${p.cores.map(c => `<i style="background:${c}"></i>`).join('')}</span>${p.nome}</label>`).join('');
+let tecendo = 0;
+function nomeia(){
+  const chave = `${tear.padrao}|${tear.paleta}|${tear.ponto}|${tear.rep}`; let h = 7; for(const c of chave) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  const [n, s] = NOMES[h % NOMES.length];
+  $('#pano-nome').textContent = 'Pano ' + n;
+  $('#pano-sentido').innerHTML = `<span lang="kmb">${n.toLowerCase()}</span> quer dizer ${s}`;
+}
+function tecer(animar){
+  nomeia();
+  $('#out-ponto').textContent = tear.ponto + ' px'; $('#out-rep').textContent = tear.rep + ' fios';
+  const {W, H, d} = ajustar(tearCv); const s = Math.round(tear.ponto * d);
+  const o = {W, H, s, padrao:tear.padrao, cores:PALETAS[tear.paleta].cores, P:tear.rep};
+  const id = ++tecendo;
+  if(!animar || reduz){ tearCtx.clearRect(0, 0, W, H); pintar(tearCtx, o); lanc.classList.remove('ativa'); return; }
+  tearCtx.clearRect(0, 0, W, H);
+  const linhas = Math.ceil(H / s), dur = 1500, t0 = performance.now(); let feitas = 0;
+  lanc.classList.add('ativa');
+  const passo = t => {
+    if(id !== tecendo) return;
+    const alvo = Math.min(linhas, Math.ceil((t - t0) / dur * linhas));
+    if(alvo > feitas){ pintar(tearCtx, {...o, j0:feitas, j1:alvo}); feitas = alvo; }
+    lanc.style.top = (feitas / linhas * 100) + '%';
+    if(feitas < linhas) requestAnimationFrame(passo); else setTimeout(() => { if(id === tecendo) lanc.classList.remove('ativa'); }, 250);
+  };
+  requestAnimationFrame(passo);
+}
+ctlPad.addEventListener('change', e => { tear.padrao = e.target.value; tecer(true); });
+ctlPal.addEventListener('change', e => { tear.paleta = e.target.value; tecer(true); });
+$('#tear-ponto').addEventListener('input', e => { tear.ponto = +e.target.value; tecer(false); });
+$('#tear-rep').addEventListener('input', e => { tear.rep = +e.target.value; tecer(false); });
+$('#tear-tecer').addEventListener('click', () => tecer(true));
+$('#tear-sorte').addEventListener('click', () => {
+  const pads = Object.keys(PADROES), pals = Object.keys(PALETAS).filter(k => k !== 'rafia');
+  tear.padrao = pads[Math.floor(Math.random()*pads.length)]; tear.paleta = pals[Math.floor(Math.random()*pals.length)];
+  tear.ponto = 5 + Math.floor(Math.random()*8); tear.rep = 10 + 2*Math.floor(Math.random()*10);
+  $('#pad-' + tear.padrao).checked = true; $('#pal-' + tear.paleta).checked = true;
+  $('#tear-ponto').value = tear.ponto; $('#tear-rep').value = tear.rep;
+  tecer(true);
+});
+tecer(false);
+let tearW = 0; new ResizeObserver(() => { const w = tearCv.clientWidth; if(w !== tearW){ tearW = w; tecer(false); } }).observe(tearCv);
+if(!reduz && 'IntersectionObserver' in window){ const io = new IntersectionObserver(es => { if(es[0].isIntersecting){ tecer(true); io.disconnect(); } }, {threshold:.4}); io.observe(tearCv); }
+
+/* ---------- Números ---------- */
+const NUMS = ['moxi','iiadi','itatu','iuana','itanu','samanu','sambuadi','nake','divua','kuinyi'];
+$('#numeros').innerHTML = NUMS.map((n, i) => `<button class="num" type="button" data-falar="${n}" aria-label="${i+1}: ${n}"><b>${i+1}</b><span lang="kmb">${n}</span></button>`).join('');
+
+/* ---------- Glossário ---------- */
+const G = [
+  {pt:['Bom dia','bom-dia','dormiste bem','dormiu bem'], k:'wazekele kiambote', kv:['uazekele kiambote'], c:'Saudações', n:'literalmente “dormiste bem?”'},
+  {pt:['Dormi bem','eu dormi bem'], k:'ngazekele kiambote', c:'Saudações'},
+  {pt:['Como estás','como está','como vai','estás bem','tudo bem'], k:'uala kiambote', kv:['wala kiambote'], c:'Saudações'},
+  {pt:['Estou bem','eu estou bem'], k:'ngala kiambote', c:'Saudações'},
+  {pt:['Muito obrigado','muito obrigada'], k:'ngasakidila kiavulu', c:'Cortesia'},
+  {pt:['Obrigado','obrigada'], k:'ngasakidila', c:'Cortesia'},
+  {pt:['Sim'], k:'ewá', kv:['ewa','eewa'], c:'Cortesia'},
+  {pt:['Não'], k:'kana', c:'Cortesia'},
+  {pt:['Fica bem','fique bem','adeus','tchau','até logo'], k:'xala kiambote', c:'Despedidas', n:'diz quem parte'},
+  {pt:['Vai bem','vá bem'], k:'ndé kiambote', c:'Despedidas', n:'responde quem fica'},
+  {pt:['O meu nome é','meu nome é','chamo-me','eu chamo-me','eu me chamo','me chamo'], k:'dijina diami', c:'Apresentação'},
+  {pt:['Como te chamas','como se chama','como você se chama','qual é o teu nome','qual é o seu nome','qual o teu nome'], k:'dijina diê nanyi', c:'Apresentação'},
+  {pt:['Amo-te','eu amo-te','te amo','eu te amo','gosto de ti','gosto muito de ti'], k:'ngakuzola', c:'Afeto'},
+  {pt:['Estou com fome','tenho fome','eu tenho fome','eu estou com fome'], k:'ngala ni nzala', c:'À mesa'},
+  {pt:['Vamos comer'], k:'tuende kudia', c:'À mesa'},
+  {pt:['Quero comprar','eu quero comprar'], k:'ngamesena kusumba', c:'Na kitanda'},
+  {pt:['Quero','eu quero'], k:'ngamesena', c:'Frases'},
+  {pt:['Meu amigo','o meu amigo','minha amiga','a minha amiga'], k:'kamba diami', c:'Pessoas'},
+  {pt:['Vamos'], k:'tuende', c:'Frases'},
+  {pt:['Bem','bom','boa','está bem','tá bem'], k:'kiambote', kv:['kyambote'], c:'Frases'},
+  {pt:['Muito'], k:'kiavulu', c:'Frases'},
+  {pt:['Eu'], k:'eme', c:'Pronomes'},
+  {pt:['Tu','você'], k:'eye', c:'Pronomes'},
+  {pt:['Ele','ela'], k:'muene', c:'Pronomes'},
+  {pt:['Nós'], k:'etu', c:'Pronomes'},
+  {pt:['Vocês','vós'], k:'enu', c:'Pronomes'},
+  {pt:['Eles','elas'], k:'ene', c:'Pronomes'},
+  {pt:['E','com'], k:'ni', c:'Ligações'},
+  {pt:['Mãe','mamã','mamãe','mama'], k:'mama', c:'Pessoas'},
+  {pt:['Pai','papá'], k:'tata', c:'Pessoas'},
+  {pt:['Irmão','irmã'], k:'phange', kv:['pange'], c:'Pessoas'},
+  {pt:['Filho','filha','criança'], k:'mona', c:'Pessoas', n:'plural: ana'},
+  {pt:['Mais novo','mais nova'], k:'kandenge', kv:['kandengue'], c:'Pessoas'},
+  {pt:['Mais velho','mais velha'], k:'kota', c:'Pessoas'},
+  {pt:['Amigo','amiga'], k:'kamba', c:'Pessoas'},
+  {pt:['Homem'], k:'diiala', c:'Pessoas'},
+  {pt:['Mulher'], k:'muhatu', c:'Pessoas'},
+  {pt:['Deus'], k:'Nzambi', c:'Natureza', proprio:true},
+  {pt:['Água'], k:'menha', c:'Natureza'},
+  {pt:['Sol'], k:'dikumbi', c:'Natureza'},
+  {pt:['Lua'], k:'mbeji', c:'Natureza'},
+  {pt:['Chuva'], k:'nvula', c:'Natureza'},
+  {pt:['Terra'], k:'ixi', c:'Natureza'},
+  {pt:['Fogo'], k:'tubia', c:'Natureza'},
+  {pt:['Mar'], k:'kalunga', c:'Natureza'},
+  {pt:['Coração'], k:'muxima', c:'Corpo'},
+  {pt:['Cabeça'], k:'mutue', c:'Corpo'},
+  {pt:['Comer'], k:'kudia', c:'Verbos'},
+  {pt:['Beber'], k:'kunua', c:'Verbos'},
+  {pt:['Dormir'], k:'kuzeka', c:'Verbos'},
+  {pt:['Ir'], k:'kuia', c:'Verbos'},
+  {pt:['Vir'], k:'kuiza', c:'Verbos'},
+  {pt:['Falar'], k:'kuzuela', c:'Verbos'},
+  {pt:['Dançar'], k:'kukina', c:'Verbos'},
+  {pt:['Cantar'], k:'kuimba', c:'Verbos'},
+  {pt:['Trabalhar'], k:'kukalakala', c:'Verbos'},
+  {pt:['Ver'], k:'kumona', c:'Verbos'},
+  {pt:['Amar','gostar'], k:'kuzola', c:'Verbos'},
+  {pt:['Comprar'], k:'kusumba', c:'Verbos'},
+  {pt:['Vender'], k:'kusumbisa', c:'Verbos'},
+  {pt:['Comida'], k:'kudia', c:'Comida'},
+  {pt:['Fome'], k:'nzala', c:'Comida'},
+  {pt:['Galinha','frango'], k:'sanji', c:'Comida'},
+  {pt:['Peixe'], k:'mbiji', c:'Comida'},
+  {pt:['Carne'], k:'xitu', c:'Comida'},
+  {pt:['Sal'], k:'mungua', c:'Comida'},
+  {pt:['Feijão'], k:'makunde', c:'Comida'},
+  {pt:['Jinguba','ginguba','amendoim'], k:'jinguba', c:'Comida'},
+  {pt:['Jindungo','gindungo','piri-piri','malagueta'], k:'jindungu', c:'Comida'},
+  {pt:['Funje','funji','funge'], k:'funji', c:'Comida'},
+  {pt:['Casa'], k:'inzo', c:'Lugares'},
+  {pt:['Mercado','quitanda'], k:'kitanda', c:'Lugares'},
+  {pt:['Dinheiro'], k:'kitadi', c:'Lugares'},
+  {pt:['Um','uma'], k:'moxi', c:'Números'},
+  {pt:['Dois','duas'], k:'iiadi', c:'Números'},
+  {pt:['Três'], k:'itatu', c:'Números'},
+  {pt:['Quatro'], k:'iuana', c:'Números'},
+  {pt:['Cinco'], k:'itanu', c:'Números'},
+  {pt:['Seis'], k:'samanu', c:'Números'},
+  {pt:['Sete'], k:'sambuadi', c:'Números'},
+  {pt:['Oito'], k:'nake', c:'Números'},
+  {pt:['Nove'], k:'divua', c:'Números'},
+  {pt:['Dez'], k:'kuinyi', c:'Números'}
+];
+const norm = s => s.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/[’`´]/g, "'");
+const canonK = s => norm(s).replace(/ky/g, 'ki').replace(/\bw/g, 'u').replace(/ph/g, 'p');
+const MAPA = {pt:new Map(), kmb:new Map()};
+G.forEach(e => {
+  e.pt.forEach(p => { const k = norm(p); if(!MAPA.pt.has(k)) MAPA.pt.set(k, e); });
+  [e.k, ...(e.kv || [])].forEach(k => { const c = canonK(k); if(!MAPA.kmb.has(c)) MAPA.kmb.set(c, e); });
+});
+$('#n-entradas').textContent = G.length;
+const SOLTAS = new Set(['o','a','os','as','uns','umas']);
+const MAXN = 5;
+function traduzir(texto, dir){
+  const toks = [...texto.matchAll(/([\p{L}\p{M}][\p{L}\p{M}'’\-]*)|([^\p{L}\p{M}]+)/gu)].map(m => ({t:m[0], w:!!m[1]}));
+  const chave = dir === 'pt' ? norm : canonK, mapa = MAPA[dir];
+  const segs = []; let i = 0;
+  while(i < toks.length){
+    const tk = toks[i];
+    if(!tk.w){ segs.push({tipo:'txt', t:tk.t}); i++; continue; }
+    const idx = [i]; let j = i;
+    while(idx.length < MAXN){ const sep = toks[j+1], nx = toks[j+2]; if(sep && !sep.w && /^\s+$/.test(sep.t) && nx && nx.w){ idx.push(j+2); j += 2; } else break; }
+    let achou = null;
+    for(let n = idx.length; n >= 1; n--){
+      const k = chave(idx.slice(0, n).map(x => toks[x].t).join(' '));
+      if(mapa.has(k)){ achou = {e:mapa.get(k), n, fim:idx[n-1]}; break; }
+    }
+    if(achou){
+      const src = toks.slice(i, achou.fim + 1).map(x => x.t).join('');
+      let alvo = dir === 'pt' ? achou.e.k : achou.e.pt[0];
+      if(!achou.e.proprio) alvo = alvo.charAt(0).toLowerCase() + alvo.slice(1);
+      if(/^\p{Lu}/u.test(src)) alvo = alvo.charAt(0).toUpperCase() + alvo.slice(1);
+      segs.push({tipo:'hit', e:achou.e, src, t:alvo, n:achou.n}); i = achou.fim + 1; continue;
+    }
+    if(dir === 'pt' && SOLTAS.has(norm(tk.t))){ i++; if(toks[i] && !toks[i].w && /^\s+$/.test(toks[i].t)) i++; continue; }
+    segs.push({tipo:'miss', t:tk.t}); i++;
+  }
+  return segs;
+}
+let dir = 'pt';
+const entrada = $('#entrada'), saida = $('#saida');
+const EXEMPLOS = {
+  pt:['Bom dia! Como estás?','Obrigado, meu amigo.','Como te chamas?','Quero comprar jinguba e jindungo.','Eu te amo.','Vamos dançar!','Fica bem!'],
+  kmb:['Wazekele kiambote?','Ngala kiambote, ngasakidila.','Dijina diami Nzinga.','Tuende kukina!','Ngakuzola, kamba diami.','Xala kiambote!']
+};
+function pintaExemplos(){ $('#exemplos').innerHTML = EXEMPLOS[dir].map(x => `<button class="chip" type="button">${esc(x)}</button>`).join(''); }
+$('#exemplos').addEventListener('click', e => { const b = e.target.closest('.chip'); if(!b) return; entrada.value = b.textContent; correr(); });
+function correr(){
+  const segs = traduzir(entrada.value, dir);
+  let html = '', k = 0, ok = 0, tot = 0; const pares = new Map();
+  segs.forEach(s => {
+    if(s.tipo === 'txt'){ html += esc(s.t); return; }
+    if(s.tipo === 'hit'){ ok += s.n; tot += s.n; html += `<span class="seg hit" style="--i:${k++}" title="${esc(s.src)} → ${esc(s.t)}">${esc(s.t)}</span>`; pares.set(norm(s.src), [s.src, s.t]); }
+    else { tot += 1; html += `<span class="seg miss" style="--i:${k++}" title="Fora do glossário">${esc(s.t)}</span>`; }
+  });
+  html = html.trim();
+  saida.lang = dir === 'pt' ? 'kmb' : 'pt';
+  saida.innerHTML = html || '<span class="vazio">A tradução aparece aqui.</span>';
+  const pct = tot ? Math.round(ok / tot * 100) : 0;
+  $('#medidor-i').style.width = pct + '%';
+  $('#medidor-txt').textContent = tot ? `${ok} de ${tot} palavra${tot === 1 ? '' : 's'} reconhecida${ok === 1 ? '' : 's'} · ${pct}%` : 'Escreve uma frase para começar.';
+  $('#pares').innerHTML = [...pares.values()].map(([a, b]) => `<li>${esc(a)} → <b>${esc(b)}</b></li>`).join('');
+}
+function textoSaida(){ return saida.querySelector('.vazio') ? '' : saida.textContent.trim(); }
+function poeDirecao(d){
+  dir = d;
+  $('#lado-de').textContent = d === 'pt' ? 'Português' : 'Kimbundu';
+  $('#lado-para').textContent = d === 'pt' ? 'Kimbundu' : 'Português';
+  $('#rot-entrada').textContent = d === 'pt' ? 'Escreve em português' : 'Escreve em kimbundu';
+  $('#rot-saida').textContent = d === 'pt' ? 'Em kimbundu' : 'Em português';
+  entrada.lang = d === 'pt' ? 'pt' : 'kmb';
+  pintaExemplos();
+}
+let deb; entrada.addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(correr, 260); });
+$('#trocar').addEventListener('click', e => {
+  const t = textoSaida(); e.currentTarget.classList.toggle('gira');
+  poeDirecao(dir === 'pt' ? 'kmb' : 'pt'); if(t) entrada.value = t; correr();
+});
+$('#ouvir').addEventListener('click', e => { const t = dir === 'pt' ? textoSaida() : entrada.value.trim(); if(t) falar(t, e.currentTarget); else avisar('Não há texto em kimbundu para ouvir.'); });
+$('#copiar').addEventListener('click', () => {
+  const t = textoSaida(); if(!t){ avisar('Ainda não há tradução.'); return; }
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(saida); const s = getSelection(); s.removeAllRanges(); s.addRange(r); avisar('Texto selecionado. Usa Ctrl+C para copiar.'); };
+  try{ navigator.clipboard.writeText(t).then(() => avisar('Tradução copiada.'), fallback); }catch(err){ fallback(); }
+});
+// tabela
+const corpo = $('#tabela-corpo');
+function pintaTabela(f = ''){
+  const q = norm(f.trim());
+  const linhas = G.filter(e => !q || e.pt.some(p => norm(p).includes(q)) || canonK(e.k).includes(canonK(f.trim())));
+  corpo.innerHTML = linhas.map(e => `<tr><td>${esc(e.pt[0])}${e.n ? `<br><small style="color:var(--tinta-2)">${esc(e.n)}</small>` : ''}</td><td lang="kmb">${esc(e.k)}</td><td>${esc(e.c)}</td></tr>`).join('') || '<tr><td colspan="3">Nada encontrado no glossário.</td></tr>';
+}
+$('#busca').addEventListener('input', e => pintaTabela(e.target.value));
+pintaTabela(); poeDirecao('pt'); correr();
+
+/* ---------- Diálogos ---------- */
+const CENAS = {
+  bomdia:{nome:'Bom dia', a:{nome:'Rosa', pal:'samakaka'}, b:{nome:'Kota Mateus', pal:'cazengo'}, falas:[
+    ['a','Wazekele kiambote?','Bom dia! (Dormiste bem?)'],
+    ['b','Ngazekele kiambote. Uala kiambote?','Dormi bem. Estás bem?'],
+    ['a','Ngala kiambote, ngasakidila.','Estou bem, obrigada.'],
+    ['b','Dijina diê nanyi?','Como te chamas?'],
+    ['a','Dijina diami Rosa.','O meu nome é Rosa.']]},
+  kitanda:{nome:'Na kitanda', a:{nome:'Joana', pal:'kwanza'}, b:{nome:'Mamã Lena', pal:'dende'}, falas:[
+    ['a','Wazekele kiambote, mama!','Bom dia, mamã!'],
+    ['b','Ngazekele kiambote, mona.','Dormi bem, filha.'],
+    ['a','Ngamesena kusumba jinguba ni jindungu.','Quero comprar jinguba e jindungo.'],
+    ['b','Ewá!','Sim!'],
+    ['a','Ngasakidila, mama.','Obrigada, mamã.'],
+    ['b','Ndé kiambote!','Vai bem!']]},
+  mesa:{nome:'À mesa', a:{nome:'Tito', pal:'noite'}, b:{nome:'Mamã Lena', pal:'dende'}, falas:[
+    ['a','Ngala ni nzala!','Estou com fome!'],
+    ['b','Tuende kudia funji ni sanji.','Vamos comer funje com galinha.'],
+    ['a','Ngamesena menha.','Quero água.'],
+    ['b','Kiambote.','Está bem.'],
+    ['a','Ngasakidila, mama!','Obrigado, mamã!']]},
+  adeus:{nome:'Despedida', a:{nome:'Rosa', pal:'samakaka'}, b:{nome:'Joana', pal:'kwanza'}, falas:[
+    ['a','Ngakuzola, kamba diami.','Gosto muito de ti, minha amiga.'],
+    ['b','Ngasakidila kiavulu!','Muito obrigada!'],
+    ['a','Xala kiambote!','Fica bem! (diz quem parte)'],
+    ['b','Ndé kiambote!','Vai bem! (responde quem fica)']]}
+};
+const AVATAR = {}; Object.keys(PALETAS).forEach((k, n) => { try{ AVATAR[k] = azulejo(64, 64, {s:4, padrao:n % 2 ? 'ziguezague' : 'losango', cores:PALETAS[k].cores, P:10}); }catch(e){} });
+const abas = $('#abas'), conversa = $('#conversa');
+let cena = 'bomdia', tocar = 0;
+abas.innerHTML = Object.entries(CENAS).map(([k, c]) => `<button class="aba" type="button" role="tab" id="aba-${k}" data-cena="${k}" aria-selected="${k === cena}">${esc(c.nome)}</button>`).join('');
+const linhaHTML = (c, f, entra) => { const p = c[f[0]]; return `<div class="linha-fala ${f[0]}${entra ? ' entra' : ''}"><span class="avatar" style="background-image:url(${AVATAR[p.pal] || ''})" aria-hidden="true"></span><button class="fala" type="button" data-k="${esc(f[1])}"><span class="quem">${esc(p.nome)}</span><span class="k" lang="kmb">${esc(f[1])}</span><span class="p">${esc(f[2])}</span></button></div>`; };
+function mostraCena(k){ tocar++; cena = k; const c = CENAS[k]; conversa.innerHTML = c.falas.map(f => linhaHTML(c, f, false)).join(''); $$('.aba', abas).forEach(a => a.setAttribute('aria-selected', a.dataset.cena === k)); conversa.setAttribute('aria-labelledby', 'aba-' + k); }
+const espera = ms => new Promise(r => setTimeout(r, ms));
+async function reproduz(){
+  const id = ++tocar, c = CENAS[cena]; conversa.innerHTML = '';
+  for(const f of c.falas){
+    if(id !== tocar) return;
+    const dg = document.createElement('div'); dg.className = `linha-fala ${f[0]} entra`;
+    dg.innerHTML = `<span class="avatar" style="background-image:url(${AVATAR[c[f[0]].pal] || ''})" aria-hidden="true"></span><span class="digita" aria-hidden="true"><i></i><i></i><i></i></span>`;
+    conversa.appendChild(dg); await espera(reduz ? 0 : 750); if(id !== tocar) return;
+    dg.outerHTML = linhaHTML(c, f, true); await espera(reduz ? 0 : 650);
+  }
+}
+abas.addEventListener('click', e => { const b = e.target.closest('.aba'); if(b) mostraCena(b.dataset.cena); });
+abas.addEventListener('keydown', e => { if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return; const ks = Object.keys(CENAS); const n = ks[mod(ks.indexOf(cena) + (e.key === 'ArrowRight' ? 1 : -1), ks.length)]; mostraCena(n); $('#aba-' + n).focus(); });
+$('#reproduzir').addEventListener('click', reproduz);
+$('#mostrar-pt').addEventListener('change', e => conversa.classList.toggle('sem-pt', !e.target.checked));
+conversa.addEventListener('click', e => {
+  const b = e.target.closest('.fala'); if(!b) return;
+  poeDirecao('kmb'); entrada.value = b.dataset.k; correr();
+  if(innerWidth < 980) $('#painel-tradutor').scrollIntoView({behavior: reduz ? 'auto' : 'smooth', block:'start'});
+  avisar('Fala enviada para o tradutor.');
+});
+mostraCena('bomdia');
+
+/* ---------- Código QR ---------- */
+const SITE = 'https://tonydevelopment.blog/kwanza-norte/';
+const qrUrl = $('#qr-url'), qrEl = $('#qr');
+function urlPadrao(){
+  try{ if(/^https?:$/.test(location.protocol) && window.self === window.top && !/^(localhost|127\.)/.test(location.hostname)) return location.origin + location.pathname.replace(/index\.html$/, ''); }catch(e){}
+  return SITE;
+}
+function desenhaQR(){
+  const url = qrUrl.value.trim();
+  $('#qr-legenda').textContent = url ? url.replace(/^https?:\/\//, '').replace(/\/$/, '') : 'Escreve o endereço do site para gerar o código.';
+  if(!url || typeof qrcode !== 'function'){ qrEl.innerHTML = ''; if(url) $('#qr-legenda').textContent = 'Não foi possível gerar o código neste navegador.'; return; }
+  const qr = qrcode(0, 'H'); qr.addData(url); qr.make();
+  const n = qr.getModuleCount(), m = 4, T = n + m*2; let d = '';
+  for(let r = 0; r < n; r++) for(let c = 0; c < n; c++) if(qr.isDark(r, c)) d += `M${c+m} ${r+m}h1v1h-1z`;
+  const meio = T/2, lado = Math.max(4, Math.round(n * .2));
+  qrEl.innerHTML = `<svg viewBox="0 0 ${T} ${T}" shape-rendering="crispEdges" aria-hidden="true"><rect width="${T}" height="${T}" fill="#FBF4E9"/><path d="${d}" fill="#1E1410"/><g transform="rotate(45 ${meio} ${meio})"><rect x="${meio - lado/2 - .8}" y="${meio - lado/2 - .8}" width="${lado + 1.6}" height="${lado + 1.6}" fill="#FBF4E9"/><rect x="${meio - lado/2}" y="${meio - lado/2}" width="${lado}" height="${lado}" fill="#B3261A"/><rect x="${meio - lado/4}" y="${meio - lado/4}" width="${lado/2}" height="${lado/2}" fill="#E3A21A"/></g></svg>`;
+}
+qrUrl.value = urlPadrao();
+let qrDeb; qrUrl.addEventListener('input', () => { clearTimeout(qrDeb); qrDeb = setTimeout(desenhaQR, 200); });
+$('#qr-copiar').addEventListener('click', () => {
+  const t = qrUrl.value.trim(); if(!t){ avisar('Escreve primeiro o endereço do site.'); return; }
+  try{ navigator.clipboard.writeText(t).then(() => avisar('Link copiado.'), () => { qrUrl.select(); avisar('Link selecionado. Usa Ctrl+C para copiar.'); }); }catch(e){ qrUrl.select(); avisar('Link selecionado. Usa Ctrl+C para copiar.'); }
+});
+desenhaQR();
+})();
+</script>
+
+</html>
